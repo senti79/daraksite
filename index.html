@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>책읽는 다락서원</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+      @font-face {
+          font-family: 'GMarketSans';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+          font-weight: 300;
+          font-display: swap;
+      }
+      @font-face {
+          font-family: 'GMarketSans';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+          font-weight: 500;
+          font-display: swap;
+      }
+      @font-face {
+          font-family: 'GMarketSans';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+          font-weight: 700;
+          font-display: swap;
+      }
+      body {
+        font-family: 'GMarketSans', sans-serif;
+        background-color: #EAEAEA;
+      }
+      .font-dodum {
+        font-family: 'Gowun Dodum', sans-serif;
+      }
+      .font-logo {
+        font-family: 'Gasoek One', sans-serif;
+      }
+      .text-highlight {
+        position: relative;
+        display: inline-block;
+        padding: 0.1em 0.3em;
+      }
+      .text-highlight::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 60%;
+        background-color: #D4A373;
+        opacity: 0.7;
+        z-index: -1;
+        transform: skewX(-12deg);
+      }
+      .dashed-border {
+        border: 2px dashed #3D3B3A;
+        padding: 0.5rem;
+      }
+      .sketch-card {
+        position: relative;
+        border: 3px solid #3D3B3A;
+        border-radius: 1.5rem;
+        box-shadow: 4px 4px 0px 0px #3D3B3A;
+        transition: all 0.2s ease-in-out;
+      }
+      .sketch-card::before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        right: 3px;
+        height: 40px;
+        background-color: #D4A373;
+        border-radius: calc(1.5rem - 3px) calc(1.5rem - 3px) 0 0;
+      }
+      .sketch-card:hover {
+          box-shadow: 6px 6px 0px 0px #3D3B3A;
+          transform: translate(-2px, -2px);
+      }
+      .header-btn {
+        position: relative;
+        width: 52px;
+        height: 48px;
+        border: 2px solid #3D3B3A;
+        background-color: white;
+        border-radius: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.2s ease-in-out;
+      }
+      .header-btn::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          border: 2px solid #3D3B3A;
+          border-radius: 1.5rem;
+          z-index: -1;
+          transform: translate(4px, 4px);
+          transition: transform 0.2s ease-in-out;
+      }
+      .header-btn:active {
+          transform: translate(2px, 2px);
+      }
+      .header-btn:active::after {
+          transform: translate(2px, 2px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "gsap/": "https://aistudiocdn.com/gsap@^3.13.0/",
+    "gsap": "https://aistudiocdn.com/gsap@^3.13.0"
+  }
+}
+</script>
+</head>
+  <body class="text-[#3D3B3A]">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

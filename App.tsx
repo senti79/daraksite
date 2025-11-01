@@ -1,0 +1,33 @@
+
+import React from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Strengths from './components/Strengths';
+import Process from './components/Process';
+import Branches from './components/Branches';
+import Programs from './components/Programs';
+import Publications from './components/Publications';
+import Franchise from './components/Franchise';
+import Footer from './components/Footer';
+
+const App: React.FC = () => {
+  return (
+    <div className="max-w-5xl mx-auto my-8 bg-[#F8F5F2] border-4 border-black rounded-3xl shadow-2xl overflow-hidden">
+      <div className="overflow-x-hidden">
+        <Header />
+        <main>
+          <Hero />
+          <Strengths />
+          <Process />
+          <Programs />
+          <Branches />
+          <Publications />
+          <Franchise />
+        </main>
+        <Footer />
+      </div>
+    </div>
+  );
+};
+
+export default App;
