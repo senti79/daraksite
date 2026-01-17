@@ -18,7 +18,7 @@ const publications = [
 
 const Publications: React.FC = () => {
     return (
-        <section id="publications" className="py-20 md:py-24 bg-white border-t-2 border-black">
+        <section id="publications" className="py-20 md:py-24 bg-white">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">다락서원 <span className="text-highlight">출판 도서</span></h2>

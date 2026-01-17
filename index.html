@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -29,7 +30,8 @@
       }
       body {
         font-family: 'GMarketSans', sans-serif;
-        background-color: #EAEAEA;
+        background-color: #F8F5F2;
+        color: #3D3B3A;
       }
       .font-dodum {
         font-family: 'Gowun Dodum', sans-serif;
@@ -40,76 +42,39 @@
       .text-highlight {
         position: relative;
         display: inline-block;
-        padding: 0.1em 0.3em;
+        z-index: 1;
       }
       .text-highlight::before {
         content: '';
         position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 60%;
-        background-color: #D4A373;
-        opacity: 0.7;
+        left: -5%;
+        bottom: 10%;
+        width: 110%;
+        height: 35%;
+        background-color: #D97706; /* Warm Orange-Brown */
+        opacity: 0.3;
         z-index: -1;
-        transform: skewX(-12deg);
-      }
-      .dashed-border {
-        border: 2px dashed #3D3B3A;
-        padding: 0.5rem;
+        border-radius: 2px;
+        transform: rotate(-0.5deg);
       }
       .sketch-card {
         position: relative;
-        border: 3px solid #3D3B3A;
-        border-radius: 1.5rem;
-        box-shadow: 4px 4px 0px 0px #3D3B3A;
-        transition: all 0.2s ease-in-out;
-      }
-      .sketch-card::before {
-        content: '';
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        right: 3px;
-        height: 40px;
-        background-color: #D4A373;
-        border-radius: calc(1.5rem - 3px) calc(1.5rem - 3px) 0 0;
+        border: 2px solid #3D3B3A;
+        border-radius: 2rem;
+        box-shadow: 6px 6px 0px 0px #3D3B3A;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
       .sketch-card:hover {
-          box-shadow: 6px 6px 0px 0px #3D3B3A;
-          transform: translate(-2px, -2px);
+          box-shadow: 10px 10px 0px 0px #92400E; /* Primary Warm Brown */
+          transform: translate(-4px, -4px);
       }
-      .header-btn {
-        position: relative;
-        width: 52px;
-        height: 48px;
-        border: 2px solid #3D3B3A;
-        background-color: white;
-        border-radius: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: transform 0.2s ease-in-out;
+      .bg-pattern {
+        background-image: radial-gradient(#92400E 1px, transparent 1px);
+        background-size: 32px 32px;
       }
-      .header-btn::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background-color: white;
-          border: 2px solid #3D3B3A;
-          border-radius: 1.5rem;
-          z-index: -1;
-          transform: translate(4px, 4px);
-          transition: transform 0.2s ease-in-out;
-      }
-      .header-btn:active {
-          transform: translate(2px, 2px);
-      }
-      .header-btn:active::after {
-          transform: translate(2px, 2px);
+      ::selection {
+        background-color: #92400E;
+        color: white;
       }
     </style>
   <script type="importmap">
@@ -124,7 +89,7 @@
 }
 </script>
 </head>
-  <body class="text-[#3D3B3A]">
+  <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

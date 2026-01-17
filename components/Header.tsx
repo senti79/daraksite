@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 const navLinks = [
@@ -19,16 +20,37 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-[#F8F5F2] border-b-2 border-black">
+    <header className="bg-[#F8F5F2] sticky top-0 z-[100] border-b border-gray-200/50 backdrop-blur-sm bg-[#F8F5F2]/90">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#" onClick={(e) => {
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: 'smooth' });
-        }} className="font-logo text-3xl text-[#3D3B3A]">책읽는 다락서원</a>
+        }} className="flex items-center gap-4 group">
+          <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+            <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-sm">
+              {/* House Roof & Outline in Warm Brown */}
+              <path d="M10 45 L50 15 L90 45 L90 85 L10 85 Z" fill="none" stroke="#92400E" strokeWidth="8" strokeLinejoin="round" />
+              {/* Book Accent in Orange-Brown */}
+              <path d="M20 90 Q50 80 80 90" fill="none" stroke="#D97706" strokeWidth="10" strokeLinecap="round" />
+              <rect x="35" y="45" width="30" height="25" fill="#92400E" opacity="0.8" rx="2" />
+            </svg>
+          </div>
+          
+          <span className="font-black text-xl md:text-2xl text-[#3D3B3A] tracking-tighter transition-colors group-hover:text-[#92400E]">
+            책읽는 다락서원
+          </span>
+        </a>
 
-        <nav className="hidden md:flex space-x-6">
+        <nav className="hidden md:flex space-x-8">
           {navLinks.map(link => (
-            <a key={link.href} href={link.href} onClick={(e) => handleLinkClick(e, link.href)} className="text-gray-700 hover:text-[#D4A373] transition-colors duration-300 font-semibold">{link.label}</a>
+            <a 
+              key={link.href} 
+              href={link.href} 
+              onClick={(e) => handleLinkClick(e, link.href)} 
+              className="text-gray-600 hover:text-[#92400E] transition-colors duration-300 font-bold text-sm tracking-tight"
+            >
+              {link.label}
+            </a>
           ))}
         </nav>
 
@@ -43,11 +65,10 @@ const Header: React.FC = () => {
         </div>
       </div>
       
-      {/* Mobile Menu */}
       <div className={`md:hidden fixed top-0 left-0 w-full h-screen bg-[#F8F5F2] z-50 transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="flex flex-col items-center justify-center h-full space-y-8">
           {navLinks.map(link => (
-            <a key={link.href} href={link.href} onClick={(e) => handleLinkClick(e, link.href)} className="text-2xl text-gray-800 hover:text-[#D4A373] transition-colors duration-300">{link.label}</a>
+            <a key={link.href} href={link.href} onClick={(e) => handleLinkClick(e, link.href)} className="text-2xl font-bold text-gray-800 hover:text-[#92400E] transition-colors duration-300">{link.label}</a>
           ))}
         </div>
       </div>

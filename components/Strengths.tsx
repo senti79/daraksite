@@ -2,22 +2,54 @@
 import React from 'react';
 
 const iconProps = {
-  className: "w-8 h-8 text-[#3D3B3A]",
+  className: "w-6 h-6 text-[#3D3B3A]",
   fill: "none",
   viewBox: "0 0 24 24",
   stroke: "currentColor",
-  strokeWidth: 2,
+  strokeWidth: 2.5,
 };
 
 const icons = {
-  Book: () => <svg {...iconProps}><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>,
-  Ban: () => <svg {...iconProps}><path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636" /></svg>,
-  Books: () => <svg {...iconProps}><path strokeLinecap="round" strokeLinejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>,
-  NoHomework: () => <svg {...iconProps}><path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>,
-  Globe: () => <svg {...iconProps}><path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h10a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.707 4.293a1 1 0 010 1.414L5.414 8l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zM12 21a9 9 0 100-18 9 9 0 000 18z" /></svg>,
-  Pen: () => <svg {...iconProps}><path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>,
-  Target: () => <svg {...iconProps}><path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6.75 6.75 0 000-13.5 6.75 6.75 0 000 13.5z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 12.75a2.75 2.75 0 000-5.5 2.75 2.75 0 000 5.5z" /></svg>,
-  Teacher: () => <svg {...iconProps}><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>,
+  Book: () => (
+    <svg {...iconProps}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+    </svg>
+  ),
+  Ban: () => (
+    <svg {...iconProps}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636M15 9l-6 6" />
+    </svg>
+  ),
+  Books: () => (
+    <svg {...iconProps}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 14v3a2 2 0 002 2h4a2 2 0 002-2v-3M8 14l-2-4m10 4l2-4M6 10h12M9 10V8a3 3 0 016 0v2M4 14h16" />
+    </svg>
+  ),
+  NoHomework: () => (
+    <svg {...iconProps}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+    </svg>
+  ),
+  Globe: () => (
+    <svg {...iconProps}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+    </svg>
+  ),
+  Pen: () => (
+    <svg {...iconProps}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+    </svg>
+  ),
+  Target: () => (
+    <svg {...iconProps}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+  Teacher: () => (
+    <svg {...iconProps}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+    </svg>
+  ),
 };
 
 const strengthsData = [
@@ -33,7 +65,7 @@ const strengthsData = [
 
 const Strengths: React.FC = () => {
   return (
-    <section id="strengths" className="py-20 md:py-24 bg-white border-y-2 border-black">
+    <section id="strengths" className="py-20 md:py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">무엇이 <span className="text-highlight">다를까요?</span></h2>
@@ -44,11 +76,17 @@ const Strengths: React.FC = () => {
             {strengthsData.map((item, index) => (
               <div 
                 key={index} 
-                className="strength-card sketch-card bg-[#F8F5F2] p-6 pt-16 flex flex-col"
+                className="strength-card sketch-card bg-[#F8F5F2] p-8 pt-20 flex flex-col group"
               >
-                <div className="absolute top-3 right-5">{item.icon}</div>
-                <h3 className="text-2xl font-bold mb-3 text-[#3D3B3A]">{item.title}</h3>
-                <p className="text-base text-gray-600 leading-relaxed flex-grow">{item.description}</p>
+                <div className="absolute top-4 left-6">
+                  <div className="relative w-12 h-12 flex items-center justify-center bg-white rounded-full border-2 border-[#3D3B3A] shadow-[2px_2px_0px_0px_#3D3B3A] group-hover:bg-[#92400E] group-hover:text-white transition-colors duration-300">
+                    <div className="absolute inset-0 bg-[#92400E] opacity-0 group-hover:opacity-10 rounded-full transition-opacity"></div>
+                    {item.icon}
+                  </div>
+                </div>
+                
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#3D3B3A]">{item.title}</h3>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-grow">{item.description}</p>
               </div>
             ))}
         </div>
