@@ -1,6 +1,13 @@
 
 import React from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const strengthsData = [
   { lottie: "/daraksite/read.json", title: '책 한 권, 통째로 읽기', description: '작품의 전체 구성을 파악하고 문장 사이의 숨은 의미를 찾는 힘을 키웁니다.' },
@@ -15,34 +22,62 @@ const strengthsData = [
 
 const Strengths: React.FC = () => {
   return (
-    <section id="strengths" className="py-20 md:py-24 bg-white">
+    <section id="strengths" className="py-20 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">무엇이 <span className="text-highlight">다를까요?</span></h2>
           <p className="mt-4 text-lg text-gray-600 font-dodum">책읽는 다락서원만의 독서 교육 철학</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {strengthsData.map((item, index) => (
-            <div
-              key={index}
-              className="strength-card sketch-card bg-white p-8 pt-20 flex flex-col group"
-            >
-              <div className="absolute top-4 right-6">
-                <div className="relative w-14 h-14 flex items-center justify-center transition-colors duration-300 overflow-hidden">
-                  <DotLottieReact
-                    src={item.lottie}
-                    loop
-                    autoplay
-                    className="w-full h-full"
-                  />
-                </div>
-              </div>
+        <div className="relative px-4 md:px-12">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+              1280: { slidesPerView: 4 },
+            }}
+            className="pb-16"
+          >
+            {strengthsData.map((item, index) => (
+              <SwiperSlide key={index} className="h-auto">
+                <div
+                  className="strength-card sketch-card bg-white p-8 pt-20 flex flex-col h-full group"
+                >
+                  <div className="absolute top-4 right-6">
+                    <div className="relative w-14 h-14 flex items-center justify-center transition-colors duration-300 overflow-hidden">
+                      <DotLottieReact
+                        src={item.lottie}
+                        loop
+                        autoplay
+                        className="w-full h-full"
+                      />
+                    </div>
+                  </div>
 
-              <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#3D3B3A]">{item.title}</h3>
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-grow">{item.description}</p>
-            </div>
-          ))}
+                  <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#3D3B3A]">{item.title}</h3>
+                  <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-grow">{item.description}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          <style>{`
+            .swiper-button-next, .swiper-button-prev {
+              color: #BE7E56 !important;
+            }
+            .swiper-pagination-bullet-active {
+              background: #BE7E56 !important;
+            }
+            .swiper-slide {
+              height: auto !important;
+            }
+          `}</style>
         </div>
       </div>
     </section>
