@@ -62,11 +62,11 @@ const Hero: React.FC = () => {
       <div className="floating-blob absolute -bottom-10 -right-10 w-32 h-32 bg-[#D97706]/5 rounded-full blur-2xl -z-10"></div>
 
       <div className="relative group">
-        <div className="relative overflow-hidden rounded-[2.5rem] shadow-xl">
+        <div className="relative overflow-hidden rounded-[2.5rem] shadow-xl bg-white">
           <img
             src="/daraksite/read.gif"
             alt="책 읽는 모습"
-            className="w-full h-auto object-cover aspect-[4/5] transform scale-100 group-hover:scale-105 transition-transform duration-1000"
+            className="w-full h-full object-contain aspect-square transform scale-100 group-hover:scale-105 transition-transform duration-1000"
           />
         </div>
       </div>
