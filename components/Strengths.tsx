@@ -38,6 +38,7 @@ const Strengths: React.FC = () => {
             navigation
             pagination={{ clickable: true }}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
+            loop={true}
             breakpoints={{
               768: {
                 slidesPerView: 2,
