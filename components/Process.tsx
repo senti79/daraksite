@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const processSteps = [
   { title: '독서 & 문해력 테스트', description: '입회 시 개인별 독서 능력을 정밀하게 진단합니다.' },
@@ -42,7 +42,7 @@ const Process: React.FC = () => {
 
                 <h3 className="text-xl font-bold text-[#3D3B3A] mb-3 relative inline-block">
                   {step.title}
-                  <div className="absolute -bottom-1 left-0 w-full h-1.5 bg-[#BE7E56] rounded-full transform -rotate-0.5 transition-colors"></div>
+                  <div className="scroll-underline absolute -bottom-1 left-0 h-1.5 bg-[#BE7E56] rounded-full transform -rotate-0.5 transition-all duration-700"></div>
                 </h3>
                 <p className="text-gray-600 leading-relaxed">{step.description}</p>
               </div>
@@ -51,7 +51,9 @@ const Process: React.FC = () => {
         </div>
 
         <div className="text-center mt-24 mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-[#3D3B3A]"><span className="text-highlight">문해력 테스트</span></h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-[#3D3B3A]">
+            <span className="text-highlight scroll-underline after:animate-none">문해력 테스트</span>
+          </h3>
           <p className="mt-4 text-lg text-gray-600 ">
             다락서원에서 개발한 <br className="md:hidden" />
             국내 최초 100% 서술형 테스트로 <br className="md:hidden" />
