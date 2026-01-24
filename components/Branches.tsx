@@ -26,7 +26,7 @@ const branchesData = {
 
 const Branches: React.FC = () => {
     return (
-        <section id="branches" className="py-20 md:py-32 bg-[#F8F5F2]">
+        <section id="branches" className="py-20 md:py-32 bg-white">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">가까운 다락서원 찾기</span></h2>

@@ -55,7 +55,7 @@ const Franchise: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="franchise" className="py-20 md:py-32 bg-[#F8F5F2]">
+    <section id="franchise" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">가맹 문의</span></h2>

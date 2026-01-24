@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
   );
 
   return (
-    <section ref={heroRef} className="relative min-h-[60vh] flex items-center bg-[#F8F5F2] pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden">
+    <section ref={heroRef} className="relative min-h-[60vh] flex items-center bg-white pt-8 pb-16 md:pt-12 md:pb-24 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-pattern opacity-10 -z-10"></div>
 

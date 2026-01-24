@@ -16,7 +16,7 @@ const supplementaryLearning = [
 
 const Process: React.FC = () => {
   return (
-    <section id="process" className="py-20 md:py-24 bg-[#F8F5F2]">
+    <section id="process" className="py-20 md:py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">체계적인 학습 과정</span></h2>
@@ -37,7 +37,7 @@ const Process: React.FC = () => {
           {processSteps.map((step, index) => (
             <div key={index} className={`mb-12 flex items-center w-full ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
               <div className="md:w-5/12"></div>
-              <div className="hidden md:block z-10 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold border-4 border-[#F8F5F2]">{`0${index + 1}`}</div>
+              <div className="hidden md:block z-10 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold border-4 border-white">{`0${index + 1}`}</div>
               <div className="w-full md:w-5/12 sketch-card bg-white p-8 pt-24 relative overflow-hidden group">
                 {/* Decorative Top Bar */}
                 <div className="absolute top-0 left-0 w-full h-10 bg-[#BE7E56]/25 flex justify-center items-center gap-4 border-b border-[#BE7E56]/20">
