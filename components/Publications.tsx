@@ -24,11 +24,8 @@ const publications = [
 ];
 
 const Publications: React.FC = () => {
-    const base = import.meta.env.BASE_URL || '/';
-    const cleanBase = base.endsWith('/') ? base : `${base}/`;
-
     return (
-        <section id="publications" className="py-20 md:py-24 bg-white relative">
+        <section id="publications" className="py-20 md:py-24 bg-white">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">다락서원 출판 도서</span></h2>
@@ -37,33 +34,27 @@ const Publications: React.FC = () => {
                 <div className="space-y-20 md:space-y-24">
                     {publications.map((pub, index) => (
                         <div key={index} className="grid md:grid-cols-5 gap-10 md:gap-12 items-center">
-                            <div className={`md:col-span-2 px-2 md:px-0 w-full ${index % 2 !== 0 ? 'md:order-2' : 'md:order-1'}`}>
-                                <div className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden w-full relative bg-white">
+                            <div className={`md:col-span-2 w-full ${index % 2 !== 0 ? 'md:order-2' : 'md:order-1'}`}>
+                                <div className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden relative bg-white"
+                                    style={{ aspectRatio: '3/4', touchAction: 'pan-y' }}>
                                     <Swiper
                                         modules={[Navigation, Pagination, Autoplay]}
-                                        spaceBetween={10}
+                                        spaceBetween={0}
                                         slidesPerView={1}
                                         navigation
                                         pagination={{ clickable: true }}
                                         autoplay={{ delay: 3000, disableOnInteraction: false }}
                                         loop={true}
-                                        touchReleaseOnEdges={true}
                                         touchStartPreventDefault={false}
-                                        touchMoveStopPropagation={false}
-                                        className="w-full aspect-[3/4]"
+                                        className="w-full h-full"
                                     >
                                         {pub.images.map((img, i) => (
-                                            <SwiperSlide key={i} className="flex items-center justify-center bg-white">
+                                            <SwiperSlide key={i} className="flex items-center justify-center bg-white h-full">
                                                 <img
-                                                    src={`${cleanBase}${img}`}
+                                                    src={`/daraksite/${img}`}
                                                     alt={`${pub.title} image ${i + 1}`}
-                                                    className="w-full h-full object-contain pointer-events-none"
+                                                    className="w-full h-full object-contain"
                                                     loading="eager"
-                                                    onLoad={(e) => {
-                                                        const target = e.target as HTMLImageElement;
-                                                        target.style.opacity = '1';
-                                                    }}
-                                                    style={{ opacity: 0, transition: 'opacity 0.3s ease' }}
                                                 />
                                             </SwiperSlide>
                                         ))}
@@ -87,14 +78,6 @@ const Publications: React.FC = () => {
                 }
                 #publications .swiper-pagination-bullet-active {
                     background: #BE7E56 !important;
-                }
-                .swiper {
-                    touch-action: pan-y !important;
-                }
-                .swiper-slide {
-                    display: flex !important;
-                    align-items: center;
-                    justify-content: center;
                 }
             `}</style>
         </section>
