@@ -14,10 +14,15 @@ const publications = [
         tagline: '아이들이 시인이 되는 곳',
         description: (
             <>
-                초등 저학년 아이들이 직접 쓴<br className="md:hidden" />
-                동시와 그림을 모았습니다.<br className="md:hidden" />
-                아이들의 순수한 마음이 종이에 그대로 담겨,<br className="md:hidden" />
-                그 자체가 하나의 아름다운 시가 됩니다.
+                <span className="md:hidden">
+                    초등 저학년 아이들이 직접 쓴<br />
+                    동시와 그림을 모았습니다.<br />
+                    아이들의 순수한 마음이 종이에 그대로 담겨,<br />
+                    그 자체가 하나의 아름다운 시가 됩니다.
+                </span>
+                <span className="hidden md:inline">
+                    초등 저학년 아이들이 직접 쓴 동시와 그림을 모았습니다. 아이들의 순수한 마음이 종이에 그대로 담겨, 그 자체가 하나의 아름다운 시가 됩니다.
+                </span>
             </>
         ),
         images: ['poem_0.png', 'poem_1.png', 'poem_3.png', 'poem_4.png', 'poem_5.png', 'poem_6.png', 'poem_7.png']
@@ -27,9 +32,13 @@ const publications = [
         tagline: '아이들이 작가가 되는 곳',
         description: (
             <>
-                일 년에 한 번, 아이들이 쓴 최고의 글을 모아 출판합니다.<br className="md:hidden" />
-                자신의 글이 책이 되는 놀라운 경험을 통해<br className="md:hidden" />
-                작가의 꿈을 키울 수 있습니다.
+                <span className="md:hidden">
+                    일 년에 한 번,<br />
+                    아이들이 쓴 최고의 글을 모아 출판합니다.
+                </span>
+                <span className="hidden md:inline">
+                    일 년에 한 번, 아이들이 쓴 최고의 글을 모아 출판합니다. 자신의 글이 책이 되는 놀라운 경험을 통해 작가의 꿈을 키울 수 있습니다.
+                </span>
             </>
         ),
         images: ['review_0.png', 'review_1.png', 'review_2.png', 'review_3.png', 'review_4.png', 'review_5.png', 'review_6.png', 'review_7.png', 'review_8.png', 'review_9.png', 'review_10.png', 'review_11.png']
