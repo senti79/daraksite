@@ -29,7 +29,7 @@ const Branches: React.FC = () => {
         <section id="branches" className="py-20 md:py-32 bg-[#F8F5F2]">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">가까운 다락서원 찾기</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">가까운 다락서원 찾기</span></h2>
                     <p className="mt-4 text-lg text-gray-600 ">우리 동네 독서 전문 교육원</p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">

@@ -32,7 +32,7 @@ const AccordionItem: React.FC<{ q: string; a: string; isOpen: boolean; onClick: 
         });
       }
     }, itemRef);
-    
+
     return () => ctx.revert();
   }, [isOpen]);
 
@@ -41,7 +41,7 @@ const AccordionItem: React.FC<{ q: string; a: string; isOpen: boolean; onClick: 
       <button onClick={onClick} className="w-full text-left py-5 px-6 flex justify-between items-center focus:outline-none">
         <span className="text-lg font-semibold text-[#3D3B3A]">{q}</span>
         <span className={`transform transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
-            <svg className="w-6 h-6 text-[#D4A373]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+          <svg className="w-6 h-6 text-[#D4A373]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
         </span>
       </button>
       <div ref={contentRef} className="overflow-hidden h-0">
@@ -58,7 +58,7 @@ const Franchise: React.FC = () => {
     <section id="franchise" className="py-20 md:py-32 bg-[#F8F5F2]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">가맹 문의</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">가맹 문의</span></h2>
           <p className="mt-4 text-lg text-gray-600 ">책읽는 다락서원과 함께 아이들의 미래를 열어갈 원장님을 모십니다.</p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12">
@@ -77,10 +77,10 @@ const Franchise: React.FC = () => {
             <h3 className="text-2xl font-bold text-[#3D3B3A] p-6 pt-20 border-b border-gray-300">자주 묻는 질문</h3>
             <div>
               {faqs.map((faq, index) => (
-                <AccordionItem 
-                  key={index} 
-                  q={faq.q} 
-                  a={faq.a} 
+                <AccordionItem
+                  key={index}
+                  q={faq.q}
+                  a={faq.a}
                   isOpen={openIndex === index}
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 />

@@ -21,16 +21,16 @@ const Publications: React.FC = () => {
         <section id="publications" className="py-20 md:py-24 bg-white">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">다락서원 <span className="text-highlight">출판 도서</span></h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">다락서원 출판 도서</span></h2>
                     <p className="mt-4 text-lg text-gray-600 ">아이들의 상상력과 글솜씨가 책으로 피어납니다.</p>
                 </div>
                 <div className="space-y-20">
                     {publications.map((pub, index) => (
                         <div key={index} className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
                             <div className={`md:col-span-2 ${index % 2 !== 0 ? 'md:order-2' : ''}`}>
-                               <div className="dashed-border bg-white">
-                                 <img src={pub.img} alt={pub.title} className="w-full h-auto object-cover aspect-[3/4]"/>
-                               </div>
+                                <div className="dashed-border bg-white">
+                                    <img src={pub.img} alt={pub.title} className="w-full h-auto object-cover aspect-[3/4]" />
+                                </div>
                             </div>
                             <div className={`md:col-span-3 ${index % 2 !== 0 ? 'md:order-1' : ''}`}>
                                 <span className=" text-[#D4A373] font-semibold">{pub.tagline}</span>
