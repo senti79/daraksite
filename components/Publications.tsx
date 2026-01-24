@@ -15,8 +15,7 @@ const publications = [
         description: (
             <>
                 <span className="md:hidden">
-                    초등 저학년 아이들이 직접 쓴<br />
-                    동시와 그림을 모았습니다.<br />
+                    초등 저학년 아이들이 직접 쓴 동시와 그림을 모았습니다.<br /><br />
                     아이들의 순수한 마음이 종이에 그대로 담겨,<br />
                     그 자체가 하나의 아름다운 시가 됩니다.
                 </span>
