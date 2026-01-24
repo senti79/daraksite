@@ -30,14 +30,39 @@ const programData = {
 type Category = keyof typeof programData;
 
 const Programs: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<Category>('초등');
+  const categories = Object.keys(programData) as Category[];
+  const [activeTab, setActiveTab] = useState<Category>(categories[0]);
   const cardsRef = useRef<HTMLDivElement>(null);
+  const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
+
+  const startAutoPlay = () => {
+    stopAutoPlay();
+    autoPlayRef.current = setInterval(() => {
+      setActiveTab((prev) => {
+        const currentIndex = categories.indexOf(prev);
+        const nextIndex = (currentIndex + 1) % categories.length;
+        return categories[nextIndex];
+      });
+    }, 5000);
+  };
+
+  const stopAutoPlay = () => {
+    if (autoPlayRef.current) {
+      clearInterval(autoPlayRef.current);
+    }
+  };
+
+  useEffect(() => {
+    startAutoPlay();
+    return () => stopAutoPlay();
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // Fade out current cards
       gsap.fromTo('.program-card',
-        { opacity: 0, scale: 0.9, y: 30 },
-        { opacity: 1, scale: 1, y: 0, duration: 0.5, stagger: 0.1, ease: 'power2.out' }
+        { opacity: 0, y: 20, scale: 0.95 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.1, ease: 'power3.out' }
       );
     }, cardsRef);
     return () => ctx.revert();
@@ -52,26 +77,44 @@ const Programs: React.FC = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
-          {Object.keys(programData).map((tab) => (
+          {categories.map((tab) => (
             <button
               key={tab}
-              onClick={() => setActiveTab(tab as Category)}
-              className={`px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${activeTab === tab ? 'bg-[#BE7E56] text-white shadow-lg' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              onClick={() => {
+                setActiveTab(tab);
+                startAutoPlay(); // Reset timer on manual click
+              }}
+              className={`relative px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 overflow-hidden ${activeTab === tab ? 'bg-[#BE7E56] text-white shadow-lg' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                 }`}
             >
-              {tab}
+              <span className="relative z-10">{tab}</span>
+              {activeTab === tab && (
+                <div
+                  className="absolute bottom-0 left-0 h-1 bg-white/40"
+                  style={{
+                    animation: 'progress 5s linear forwards'
+                  }}
+                />
+              )}
             </button>
           ))}
         </div>
 
-        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px]">
           {programData[activeTab].map((program, index) => (
-            <div key={index} className={`program-card p-8 rounded-2xl bg-[#F8F5F2] border-l-4 ${program.color} flex flex-col shadow-sm hover:shadow-md transition-shadow`}>
+            <div key={`${activeTab}-${index}`} className={`program-card p-8 rounded-2xl bg-[#F8F5F2] border-l-4 ${program.color} flex flex-col shadow-sm hover:shadow-md transition-shadow`}>
               <h3 className="text-xl font-bold text-[#3D3B3A] mb-2">{program.name}</h3>
               <p className="text-gray-700 flex-grow">{program.description}</p>
             </div>
           ))}
         </div>
+
+        <style>{`
+          @keyframes progress {
+            from { width: 0%; }
+            to { width: 100%; }
+          }
+        `}</style>
       </div>
     </section>
   );
