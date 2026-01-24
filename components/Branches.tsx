@@ -20,7 +20,7 @@ const branchesData = {
     ],
     '대전 중구 / 동구': [
         { name: '용두원', phone: '010-3055-8945' },
-        { name: '가오원', phone: '문의' },
+        { name: '가오원', phone: '010-8428-2478' },
     ]
 };
 
