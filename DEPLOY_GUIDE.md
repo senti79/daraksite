@@ -58,7 +58,7 @@ npm install -g gh-pages
 ## 4. 확인 및 유지보수
 
 - **배포 주소**: [https://senti79.github.io/daraksite/](https://senti79.github.io/daraksite/)
-- **업데이트 방법**: 코드 수정 후 `git push`를 통해 `main` 브랜치를 업데이트하고, 다시 한 번 `npm run build`와 `gh-pages -d dist`를 실행하면 사이트에 반영됩니다.
+- **업데이트 및 배포 방법**: 코드 수정 후 `git push`를 통해 `main` 브랜치를 업데이트합니다. 이후 **무조건** `npm run deploy`를 실행하여 사이트에 최신 상태를 반영합니다. (Antigravity AI가 자동으로 수행합니다.)
 
 ## 5. 자산(Assets) 사용 규칙 (이미지, 로티 파일 등)
 
