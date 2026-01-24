@@ -16,9 +16,9 @@ const App: React.FC = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          // 밑줄 애니메이션 인지용 아주 짧은 진동 (더 미세하게 15ms로 단축)
+          // 밑줄 애니메이션 인지용 아주 짧은 진동 (더 확실하게 20ms로 조정)
           if (typeof window !== "undefined" && window.navigator && window.navigator.vibrate) {
-            window.navigator.vibrate(15);
+            window.navigator.vibrate(20);
           }
         } else {
           // 화면에서 사라지면 클래스를 제거하여 다음번에 다시 애니메이션이 실행되도록 함
@@ -45,7 +45,7 @@ const App: React.FC = () => {
     // 사용자의 첫 터치 시 진동 권한 획득을 위한 이벤트 리스너
     const handleFirstTouch = () => {
       if (typeof window !== "undefined" && window.navigator && window.navigator.vibrate) {
-        window.navigator.vibrate(1); // 아주 짧은 진동으로 권한 획득 유도
+        window.navigator.vibrate(10); // 아주 짧은 진동으로 권한 획득 및 인지 유도
       }
       window.removeEventListener('touchstart', handleFirstTouch);
       window.removeEventListener('mousedown', handleFirstTouch);
