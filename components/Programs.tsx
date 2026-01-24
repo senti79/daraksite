@@ -36,6 +36,7 @@ const Programs: React.FC = () => {
   const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
 
   const startAutoPlay = () => {
+    if (window.innerWidth < 768) return; // Disable on mobile
     stopAutoPlay();
     autoPlayRef.current = setInterval(() => {
       setActiveTab((prev) => {
@@ -53,7 +54,9 @@ const Programs: React.FC = () => {
   };
 
   useEffect(() => {
-    startAutoPlay();
+    if (window.innerWidth >= 768) {
+      startAutoPlay();
+    }
     return () => stopAutoPlay();
   }, []);
 
@@ -99,7 +102,7 @@ const Programs: React.FC = () => {
               <span className="relative z-10">{tab}</span>
               {activeTab === tab && (
                 <div
-                  className="absolute bottom-0 left-0 h-1 bg-white/40"
+                  className="absolute bottom-0 left-0 h-1 bg-white/40 hidden md:block"
                   style={{
                     animation: 'progress 3s linear forwards'
                   }}

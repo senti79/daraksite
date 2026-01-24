@@ -53,10 +53,10 @@ const Publications: React.FC = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">다락서원 출판 도서</span></h2>
                     <p className="mt-4 text-lg text-gray-600 ">아이들의 상상력과 글솜씨가 책으로 피어납니다.</p>
                 </div>
-                <div className="space-y-20">
+                <div className="space-y-20 md:space-y-24">
                     {publications.map((pub, index) => (
-                        <div key={index} className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
-                            <div className={`md:col-span-2 ${index % 2 !== 0 ? 'md:order-2' : ''}`}>
+                        <div key={index} className="grid md:grid-cols-5 gap-10 md:gap-12 items-center">
+                            <div className={`md:col-span-2 px-2 md:px-0 ${index % 2 !== 0 ? 'md:order-2' : 'md:order-1'}`}>
                                 <Swiper
                                     modules={[Navigation, Pagination, Autoplay]}
                                     spaceBetween={10}
@@ -65,11 +65,11 @@ const Publications: React.FC = () => {
                                     pagination={{ clickable: true }}
                                     autoplay={{ delay: 3000, disableOnInteraction: false }}
                                     loop={true}
-                                    className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10"
+                                    className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden"
                                 >
                                     {pub.images.map((img, i) => (
                                         <SwiperSlide key={i}>
-                                            <div className="bg-white">
+                                            <div className="bg-white flex items-center justify-center">
                                                 <img
                                                     src={img}
                                                     alt={`${pub.title} image ${i + 1}`}
@@ -80,10 +80,10 @@ const Publications: React.FC = () => {
                                     ))}
                                 </Swiper>
                             </div>
-                            <div className={`md:col-span-3 ${index % 2 !== 0 ? 'md:order-1' : ''}`}>
-                                <span className=" text-[#D4A373] font-semibold">{pub.tagline}</span>
-                                <h3 className="text-3xl md:text-4xl font-black my-3 text-[#3D3B3A]">{pub.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{pub.description}</p>
+                            <div className={`md:col-span-3 text-center md:text-left ${index % 2 !== 0 ? 'md:order-1' : 'md:order-2'}`}>
+                                <span className=" text-[#D4A373] font-semibold text-sm md:text-base">{pub.tagline}</span>
+                                <h3 className="text-2xl md:text-4xl font-black my-2 md:my-3 text-[#3D3B3A]">{pub.title}</h3>
+                                <p className="text-gray-600 leading-relaxed text-sm md:text-base">{pub.description}</p>
                             </div>
                         </div>
                     ))}
