@@ -35,7 +35,7 @@ const Publications: React.FC = () => {
                     {publications.map((pub, index) => (
                         <div key={index} className="grid md:grid-cols-5 gap-10 md:gap-12 items-center">
                             <div className={`md:col-span-2 px-2 md:px-0 w-full ${index % 2 !== 0 ? 'md:order-2' : 'md:order-1'}`}>
-                                <div className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden w-full h-[350px] sm:h-[450px] md:h-[550px] bg-[#F8F5F2] relative">
+                                <div className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden w-full h-[350px] sm:h-[450px] md:h-[550px] bg-white relative">
                                     <Swiper
                                         modules={[Navigation, Pagination, Autoplay]}
                                         spaceBetween={0}
@@ -45,21 +45,18 @@ const Publications: React.FC = () => {
                                         autoplay={{ delay: 3000, disableOnInteraction: false }}
                                         loop={true}
                                         touchReleaseOnEdges={true}
+                                        touchStartPreventDefault={false}
                                         className="w-full h-full"
+                                        style={{ touchAction: 'pan-y' } as any}
                                     >
                                         {pub.images.map((img, i) => (
-                                            <SwiperSlide key={i} className="flex items-center justify-center">
+                                            <SwiperSlide key={i} className="flex items-center justify-center bg-white">
                                                 <img
-                                                    src={`/daraksite/${img}`}
+                                                    src={img}
                                                     alt={`${pub.title} image ${i + 1}`}
                                                     className="w-full h-full object-contain"
                                                     loading="eager"
-                                                    onError={(e) => {
-                                                        const target = e.target as HTMLImageElement;
-                                                        if (!target.src.includes('http')) {
-                                                            target.src = `./${img}`; // 폴백 경로 시도
-                                                        }
-                                                    }}
+                                                    decoding="async"
                                                 />
                                             </SwiperSlide>
                                         ))}

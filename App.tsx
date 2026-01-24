@@ -12,8 +12,8 @@ import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
-    <div className="bg-[#F8F5F2] min-h-screen">
-      <div className="max-w-5xl mx-auto">
+    <div className="bg-[#F8F5F2] min-h-screen overflow-x-hidden">
+      <div className="max-w-5xl mx-auto relative">
         <Header />
         <main>
           <Hero />
