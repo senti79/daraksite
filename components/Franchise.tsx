@@ -87,7 +87,7 @@ const Franchise: React.FC = () => {
             </div>
 
             <h3 className="text-2xl font-bold text-[#BE7E56] mb-8 text-center uppercase tracking-wider">개원 자격</h3>
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            <div className="flex flex-wrap justify-start gap-4 md:gap-6">
               {qualifications.map((q, i) => (
                 <div key={i} className="flex items-center bg-[#F8F5F2] px-5 py-3 rounded-xl border border-[#BE7E56]/10 shadow-sm transition-transform hover:scale-105">
                   <span className="text-[#BE7E56] font-bold mr-3 text-xl">✓</span>
