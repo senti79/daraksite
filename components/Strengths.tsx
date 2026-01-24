@@ -50,7 +50,7 @@ const Strengths: React.FC = () => {
                 spaceBetween: 30
               },
             }}
-            className="pb-16 !px-4 md:!px-0"
+            className="pt-10 pb-16 !px-4 md:!px-0"
           >
             {strengthsData.map((item, index) => (
               <SwiperSlide key={index} className="h-auto">

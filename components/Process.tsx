@@ -31,7 +31,7 @@ const Process: React.FC = () => {
               <div className="hidden md:block z-10 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold border-4 border-[#F8F5F2]">{`0${index + 1}`}</div>
               <div className="w-full md:w-5/12 sketch-card bg-white p-8 pt-16 relative overflow-hidden group">
                 {/* Notebook Binder Style Accent */}
-                <div className="absolute top-0 left-0 w-full h-8 bg-[#F1EDE9] flex justify-center items-center gap-4">
+                <div className="absolute top-0 left-0 w-full h-8 bg-[#BE7E56] flex justify-center items-center gap-4">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <div key={i} className="w-2 h-2 rounded-full bg-white border border-[#3D3B3A]/10 shadow-[inner_1px_1px_1px_rgba(0,0,0,0.05)]"></div>
                   ))}
@@ -39,7 +39,7 @@ const Process: React.FC = () => {
 
                 <h3 className="text-xl font-bold text-[#3D3B3A] mb-3 relative inline-block">
                   {step.title}
-                  <div className="absolute -bottom-1 left-0 w-full h-1.5 bg-[#BE7E56]/15 rounded-full transform -rotate-0.5 group-hover:bg-[#BE7E56]/25 transition-colors"></div>
+                  <div className="absolute -bottom-1 left-0 w-full h-1.5 bg-[#BE7E56] rounded-full transform -rotate-0.5 transition-colors"></div>
                 </h3>
                 <p className="text-gray-600 leading-relaxed">{step.description}</p>
               </div>
