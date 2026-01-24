@@ -45,7 +45,7 @@ const Programs: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">성장 단계별 교육 프로그램</h2>
-          <p className="mt-4 text-lg text-gray-600 font-dodum">"현장의 경험으로 매년 더 좋은 책을 발굴하고 문항을 만듭니다."</p>
+          <p className="mt-4 text-lg text-gray-600 ">"현장의 경험으로 매년 더 좋은 책을 발굴하고 문항을 만듭니다."</p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">

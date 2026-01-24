@@ -20,7 +20,7 @@ const Process: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">체계적인 <span className="text-highlight">학습 과정</span></h2>
-          <p className="mt-4 text-lg text-gray-600 font-dodum">생각의 근육을 키우는 4단계 프로세스</p>
+          <p className="mt-4 text-lg text-gray-600 ">생각의 근육을 키우는 4단계 프로세스</p>
         </div>
 
         <div className="relative">
@@ -49,7 +49,7 @@ const Process: React.FC = () => {
 
         <div className="text-center mt-24 mb-16">
           <h3 className="text-2xl md:text-3xl font-bold text-[#3D3B3A]">어휘력 & 독해력 <span className="text-highlight">향상</span></h3>
-          <p className="mt-4 text-lg text-gray-600 font-dodum">기본기를 탄탄하게 다지는 추가 학습</p>
+          <p className="mt-4 text-lg text-gray-600 ">기본기를 탄탄하게 다지는 추가 학습</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

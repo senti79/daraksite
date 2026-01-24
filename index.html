@@ -1,82 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>책읽는 다락서원</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Gowun+Dodum&display=swap" rel="stylesheet">
-    <style>
-      @font-face {
-          font-family: 'GMarketSans';
-          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-          font-weight: 300;
-          font-display: swap;
-      }
-      @font-face {
-          font-family: 'GMarketSans';
-          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-          font-weight: 500;
-          font-display: swap;
-      }
-      @font-face {
-          font-family: 'GMarketSans';
-          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-          font-weight: 700;
-          font-display: swap;
-      }
-      body {
-        font-family: 'GMarketSans', sans-serif;
-        background-color: #F8F5F2;
-        color: #3D3B3A;
-      }
-      .font-dodum {
-        font-family: 'Gowun Dodum', sans-serif;
-      }
-      .font-logo {
-        font-family: 'Gasoek One', sans-serif;
-      }
-      .text-highlight {
-        position: relative;
-        display: inline-block;
-        z-index: 1;
-      }
-      .text-highlight::before {
-        content: '';
-        position: absolute;
-        left: -5%;
-        bottom: 10%;
-        width: 110%;
-        height: 35%;
-        background-color: #BE7E56; /* Warm Orange-Brown */
-        opacity: 0.3;
-        z-index: -1;
-        border-radius: 2px;
-        transform: rotate(-0.5deg);
-      }
-      .sketch-card {
-        position: relative;
-        border: 2px solid #3D3B3A;
-        border-radius: 2rem;
-        box-shadow: 6px 6px 0px 0px #3D3B3A;
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-      .sketch-card:hover {
-          box-shadow: 10px 10px 0px 0px #BE7E56; /* Primary Warm Brown */
-          transform: translate(-4px, -4px);
-      }
-      .bg-pattern {
-        background-image: radial-gradient(#BE7E56 1px, transparent 1px);
-        background-size: 32px 32px;
-      }
-      ::selection {
-        background-color: #BE7E56;
-        color: white;
-      }
-    </style>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>책읽는 다락서원</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'GMarketSans';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+      font-weight: 300;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GMarketSans';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+      font-weight: 500;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'GMarketSans';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    body {
+      font-family: 'GMarketSans', sans-serif;
+      background-color: #F8F5F2;
+      color: #3D3B3A;
+    }
+
+    .font-logo {
+      font-family: 'Gasoek One', sans-serif;
+    }
+
+    .text-highlight {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+    }
+
+    .text-highlight::before {
+      content: '';
+      position: absolute;
+      left: -5%;
+      bottom: 10%;
+      width: 110%;
+      height: 35%;
+      background-color: #BE7E56;
+      /* Warm Orange-Brown */
+      opacity: 0.3;
+      z-index: -1;
+      border-radius: 2px;
+      transform: rotate(-0.5deg);
+    }
+
+    .sketch-card {
+      position: relative;
+      border: 2px solid #3D3B3A;
+      border-radius: 2rem;
+      box-shadow: 6px 6px 0px 0px #3D3B3A;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .sketch-card:hover {
+      box-shadow: 10px 10px 0px 0px #BE7E56;
+      /* Primary Warm Brown */
+      transform: translate(-4px, -4px);
+    }
+
+    .bg-pattern {
+      background-image: radial-gradient(#BE7E56 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    ::selection {
+      background-color: #BE7E56;
+      color: white;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -89,8 +98,10 @@
 }
 </script>
 </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
-  </body>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="./index.tsx"></script>
+</body>
+
 </html>

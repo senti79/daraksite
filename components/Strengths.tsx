@@ -26,7 +26,7 @@ const Strengths: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">무엇이 <span className="text-highlight">다를까요?</span></h2>
-          <p className="mt-4 text-lg text-gray-600 font-dodum">책읽는 다락서원만의 독서 교육 철학</p>
+          <p className="mt-4 text-lg text-gray-600 ">책읽는 다락서원만의 독서 교육 철학</p>
         </div>
 
         <div className="relative px-2 md:px-20">

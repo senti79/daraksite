@@ -22,7 +22,7 @@ const Publications: React.FC = () => {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">다락서원 <span className="text-highlight">출판 도서</span></h2>
-                    <p className="mt-4 text-lg text-gray-600 font-dodum">아이들의 상상력과 글솜씨가 책으로 피어납니다.</p>
+                    <p className="mt-4 text-lg text-gray-600 ">아이들의 상상력과 글솜씨가 책으로 피어납니다.</p>
                 </div>
                 <div className="space-y-20">
                     {publications.map((pub, index) => (
@@ -33,7 +33,7 @@ const Publications: React.FC = () => {
                                </div>
                             </div>
                             <div className={`md:col-span-3 ${index % 2 !== 0 ? 'md:order-1' : ''}`}>
-                                <span className="font-dodum text-[#D4A373] font-semibold">{pub.tagline}</span>
+                                <span className=" text-[#D4A373] font-semibold">{pub.tagline}</span>
                                 <h3 className="text-3xl md:text-4xl font-black my-3 text-[#3D3B3A]">{pub.title}</h3>
                                 <p className="text-gray-600 leading-relaxed">{pub.description}</p>
                             </div>
