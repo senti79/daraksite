@@ -20,7 +20,7 @@ const publications = [
                 그 자체가 하나의 아름다운 시가 됩니다.
             </>
         ),
-        images: ['poem_0.png', 'poem_1.png', 'poem_2.png', 'poem_3.png', 'poem_4.png', 'poem_5.png', 'poem_6.png', 'poem_7.png']
+        images: ['poem_0.png', 'poem_1.png', 'poem_3.png', 'poem_4.png', 'poem_5.png', 'poem_6.png', 'poem_7.png']
     },
     {
         title: '다락서원 독후감',
