@@ -62,7 +62,7 @@
       position: absolute;
       left: -5%;
       bottom: 10%;
-      width: 110%;
+      width: 0;
       height: 35%;
       background-color: #BE7E56;
       /* Warm Orange-Brown */
@@ -70,6 +70,11 @@
       z-index: -1;
       border-radius: 2px;
       transform: rotate(-0.5deg);
+      transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .text-highlight.active::before {
+      width: 110%;
     }
 
     .sketch-card {
@@ -91,6 +96,16 @@
       background-size: 32px 32px;
     }
 
+    /* Scroll Underline Animation */
+    .scroll-underline {
+      width: 0 !important;
+      transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .scroll-underline.active {
+      width: 100% !important;
+    }
+
     ::selection {
       background-color: #BE7E56;
       color: white;
@@ -108,7 +123,7 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/daraksite/assets/index-B2Oz8pee.js"></script>
+  <script type="module" crossorigin src="/daraksite/assets/index-FvuOR8Ae.js"></script>
   <link rel="stylesheet" crossorigin href="/daraksite/assets/index-BB0hfab5.css">
 </head>
 
