@@ -43,7 +43,7 @@ const Programs: React.FC = () => {
         const nextIndex = (currentIndex + 1) % categories.length;
         return categories[nextIndex];
       });
-    }, 5000);
+    }, 3000);
   };
 
   const stopAutoPlay = () => {
@@ -92,7 +92,7 @@ const Programs: React.FC = () => {
                 <div
                   className="absolute bottom-0 left-0 h-1 bg-white/40"
                   style={{
-                    animation: 'progress 5s linear forwards'
+                    animation: 'progress 3s linear forwards'
                   }}
                 />
               )}
