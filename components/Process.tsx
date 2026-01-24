@@ -2,17 +2,11 @@
 import React from 'react';
 
 const processSteps = [
-  { title: '독서 & 문해력 평가', description: '입회 시 개인별 독서 능력을 정밀하게 진단합니다.' },
+  { title: '독서 & 문해력 테스트', description: '입회 시 개인별 독서 능력을 정밀하게 진단합니다.' },
   { title: '책 한 권 통째로 읽기', description: '선생님의 지도 아래 작품 전체를 깊이 있게 정독합니다.' },
   { title: '내용 이해와 서답형 글쓰기', description: '책의 핵심 내용을 파악하고 질문에 답하며 이해를 확인합니다.' },
   { title: '주제별 서술형 글쓰기', description: '자신의 생각을 논리적으로 풀어내는 심화 글쓰기를 진행합니다.' },
 ];
-
-const supplementaryLearning = [
-  { level: '초등 저학년', skills: '속담, 고사성어', img: 'https://picsum.photos/seed/lowgrade/400/300' },
-  { level: '초등 고학년', skills: '고사성어, 관용표현', img: 'https://picsum.photos/seed/highgrade/400/300' },
-  { level: '중등', skills: '수능 대비 문학', img: 'https://picsum.photos/seed/middle/400/300' },
-]
 
 const Process: React.FC = () => {
   return (
@@ -57,24 +51,17 @@ const Process: React.FC = () => {
         </div>
 
         <div className="text-center mt-24 mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-[#3D3B3A]"><span className="text-highlight">어휘력 & 독해력 향상</span></h3>
-          <p className="mt-4 text-lg text-gray-600 ">기본기를 탄탄하게 다지는 추가 학습</p>
+          <h3 className="text-2xl md:text-3xl font-bold text-[#3D3B3A]"><span className="text-highlight">문해력 테스트</span></h3>
+          <p className="mt-4 text-lg text-gray-600 ">국내 최초 100% 서술형 테스트</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {supplementaryLearning.map((item, index) => (
-            <div key={index} className="bg-white rounded-2xl border-2 border-black overflow-hidden group">
-              <div className="p-2">
-                <div className="dashed-border">
-                  <img src={item.img} alt={item.level} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
-                </div>
-              </div>
-              <div className="p-6">
-                <h4 className="text-xl font-bold text-[#BE7E56]">{item.level}</h4>
-                <p className="mt-2 text-gray-700">{item.skills}</p>
-              </div>
-            </div>
-          ))}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+            <img src="/daraksite/test1.png" alt="문해력 테스트 샘플 1" className="w-full h-auto transition-transform duration-500 hover:scale-105" />
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+            <img src="/daraksite/test2.png" alt="문해력 테스트 샘플 2" className="w-full h-auto transition-transform duration-500 hover:scale-105" />
+          </div>
         </div>
       </div>
     </section>
