@@ -42,23 +42,28 @@ const App: React.FC = () => {
     // For dynamic content if any
     const timeoutId = setTimeout(observeElements, 1000);
 
-    // 사용자의 첫 터치 시 진동 권한 획득을 위한 이벤트 리스너
-    const handleFirstTouch = () => {
+    const handleFirstInteraction = () => {
       if (typeof window !== "undefined" && window.navigator && window.navigator.vibrate) {
         window.navigator.vibrate(10); // 아주 짧은 진동으로 권한 획득 및 인지 유도
       }
-      window.removeEventListener('touchstart', handleFirstTouch);
-      window.removeEventListener('mousedown', handleFirstTouch);
+      window.removeEventListener('touchstart', handleFirstInteraction);
+      window.removeEventListener('mousedown', handleFirstInteraction);
+      window.removeEventListener('scroll', handleFirstInteraction);
+      window.removeEventListener('wheel', handleFirstInteraction);
     };
 
-    window.addEventListener('touchstart', handleFirstTouch);
-    window.addEventListener('mousedown', handleFirstTouch);
+    window.addEventListener('touchstart', handleFirstInteraction);
+    window.addEventListener('mousedown', handleFirstInteraction);
+    window.addEventListener('scroll', handleFirstInteraction);
+    window.addEventListener('wheel', handleFirstInteraction);
 
     return () => {
       observer.disconnect();
       clearTimeout(timeoutId);
-      window.removeEventListener('touchstart', handleFirstTouch);
-      window.removeEventListener('mousedown', handleFirstTouch);
+      window.removeEventListener('touchstart', handleFirstInteraction);
+      window.removeEventListener('mousedown', handleFirstInteraction);
+      window.removeEventListener('scroll', handleFirstInteraction);
+      window.removeEventListener('wheel', handleFirstInteraction);
     };
   }, []);
 

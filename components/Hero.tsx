@@ -21,12 +21,7 @@ const Hero: React.FC = () => {
         {
           display: "inline-block",
           stagger: {
-            each: 0.1,
-            onStart: function () {
-              if (typeof window !== "undefined" && window.navigator && window.navigator.vibrate) {
-                window.navigator.vibrate(10);
-              }
-            }
+            each: 0.1
           },
           ease: "none"
         }
