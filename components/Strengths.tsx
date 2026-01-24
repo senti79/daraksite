@@ -29,24 +29,33 @@ const Strengths: React.FC = () => {
           <p className="mt-4 text-lg text-gray-600 font-dodum">책읽는 다락서원만의 독서 교육 철학</p>
         </div>
 
-        <div className="relative px-4 md:px-16">
+        <div className="relative px-2 md:px-20">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={30}
-            slidesPerView={1}
+            spaceBetween={20}
+            slidesPerView={1.15}
+            centeredSlides={true}
             navigation
             pagination={{ clickable: true }}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             breakpoints={{
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 2 },
+              768: {
+                slidesPerView: 2,
+                centeredSlides: false,
+                spaceBetween: 30
+              },
+              1024: {
+                slidesPerView: 3,
+                centeredSlides: false,
+                spaceBetween: 30
+              },
             }}
-            className="pb-16"
+            className="pb-16 !px-4 md:!px-0"
           >
             {strengthsData.map((item, index) => (
               <SwiperSlide key={index} className="h-auto">
                 <div
-                  className="strength-card sketch-card bg-white p-8 pt-28 flex flex-col min-h-[380px] h-full group"
+                  className="strength-card sketch-card bg-white p-8 pt-28 flex flex-col min-h-[360px] md:min-h-[380px] h-full group mx-1"
                 >
                   <div className="absolute top-6 right-8">
                     <div className="relative w-16 h-16 flex items-center justify-center transition-colors duration-300 overflow-hidden">
@@ -59,8 +68,8 @@ const Strengths: React.FC = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#3D3B3A]">{item.title}</h3>
-                  <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-grow">{item.description}</p>
+                  <h3 className="text-2xl md:text-2xl font-bold mb-4 text-[#3D3B3A]">{item.title}</h3>
+                  <p className="text-base md:text-base text-gray-600 leading-relaxed flex-grow">{item.description}</p>
                 </div>
               </SwiperSlide>
             ))}
@@ -69,15 +78,27 @@ const Strengths: React.FC = () => {
           <style>{`
             .swiper-button-next, .swiper-button-prev {
               color: #BE7E56 !important;
-              opacity: 0.3 !important;
+              opacity: 0.15 !important;
               transition: all 0.3s;
+              display: none !important;
+            }
+            @media (min-width: 768px) {
+              .swiper-button-next, .swiper-button-prev {
+                display: flex !important;
+              }
             }
             .swiper-button-next:hover, .swiper-button-prev:hover {
-              opacity: 1 !important;
+              opacity: 0.8 !important;
             }
             .swiper-button-next::after, .swiper-button-prev::after {
-              font-size: 24px !important;
+              font-size: 18px !important;
               font-weight: 900 !important;
+            }
+            .swiper-button-prev {
+              left: 0px !important;
+            }
+            .swiper-button-next {
+              right: 0px !important;
             }
             .swiper-pagination-bullet-active {
               background: #BE7E56 !important;
