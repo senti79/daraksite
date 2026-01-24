@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
             each: 0.1,
             onStart: function () {
               if (typeof window !== "undefined" && window.navigator && window.navigator.vibrate) {
-                window.navigator.vibrate(5);
+                window.navigator.vibrate(2);
               }
             }
           },
