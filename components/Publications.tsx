@@ -40,29 +40,33 @@ const Publications: React.FC = () => {
                     {publications.map((pub, index) => (
                         <div key={index} className="grid md:grid-cols-5 gap-10 md:gap-12 items-center">
                             <div className={`md:col-span-2 px-2 md:px-0 w-full ${index % 2 !== 0 ? 'md:order-2' : 'md:order-1'}`}>
-                                <Swiper
-                                    modules={[Navigation, Pagination, Autoplay]}
-                                    spaceBetween={10}
-                                    slidesPerView={1}
-                                    navigation
-                                    pagination={{ clickable: true }}
-                                    autoplay={{ delay: 3000, disableOnInteraction: false }}
-                                    loop={true}
-                                    touchReleaseOnEdges={true}
-                                    touchStartPreventDefault={false}
-                                    className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden w-full aspect-[3/4] bg-white"
-                                >
-                                    {pub.images.map((img, i) => (
-                                        <SwiperSlide key={i} className="flex items-center justify-center">
-                                            <img
-                                                src={`${cleanBase}${img}`}
-                                                alt={`${pub.title} image ${i + 1}`}
-                                                className="w-full h-full object-contain"
-                                                loading={i === 0 ? "eager" : "lazy"}
-                                            />
-                                        </SwiperSlide>
-                                    ))}
-                                </Swiper>
+                                <div className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden w-full aspect-[3/4] bg-white relative z-10">
+                                    <Swiper
+                                        modules={[Navigation, Pagination, Autoplay]}
+                                        spaceBetween={10}
+                                        slidesPerView={1}
+                                        navigation
+                                        pagination={{ clickable: true }}
+                                        autoplay={{ delay: 3000, disableOnInteraction: false }}
+                                        loop={true}
+                                        touchReleaseOnEdges={true}
+                                        touchStartPreventDefault={false}
+                                        watchSlidesProgress={true}
+                                        className="w-full h-full"
+                                        style={{ touchAction: 'pan-y' }}
+                                    >
+                                        {pub.images.map((img, i) => (
+                                            <SwiperSlide key={i} className="flex items-center justify-center bg-white">
+                                                <img
+                                                    src={`${cleanBase}${img}`}
+                                                    alt={`${pub.title} image ${i + 1}`}
+                                                    className="w-full h-full object-contain block"
+                                                    loading={i === 0 ? "eager" : "lazy"}
+                                                />
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+                                </div>
                             </div>
                             <div className={`md:col-span-3 text-center md:text-left ${index % 2 !== 0 ? 'md:order-1' : 'md:order-2'}`}>
                                 <span className=" text-[#D4A373] font-semibold text-sm md:text-base">{pub.tagline}</span>
