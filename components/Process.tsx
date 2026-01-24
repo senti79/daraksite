@@ -21,6 +21,15 @@ const Process: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">체계적인 학습 과정</span></h2>
           <p className="mt-4 text-lg text-gray-600 ">생각의 근육을 키우는 4단계 프로세스</p>
+          <div className="mt-10 flex justify-center">
+            <div className="w-full max-w-lg overflow-hidden rounded-3xl shadow-2xl">
+              <img
+                src="/daraksite/training.gif"
+                alt="학습 훈련 애니메이션"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="relative">
