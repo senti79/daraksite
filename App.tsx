@@ -18,7 +18,10 @@ const App: React.FC = () => {
           entry.target.classList.add('active');
         }
       });
-    }, { threshold: 0.2 });
+    }, {
+      threshold: 0,
+      rootMargin: '0px 0px -40% 0px'
+    });
 
     // Initial check and observation
     const observeElements = () => {
