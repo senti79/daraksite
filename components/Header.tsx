@@ -7,7 +7,7 @@ const navLinks = [
   { href: '#programs', label: '프로그램' },
   { href: '#branches', label: '분원 현황' },
   { href: '#publications', label: '출판' },
-  { href: '#franchise', label: '가맹' },
+  { href: '#franchise', label: '가맹 문의' },
 ];
 
 const Header: React.FC = () => {

@@ -63,14 +63,14 @@ const Franchise: React.FC = () => {
 
           <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
             <a href="tel:010-3482-2016" className="group flex items-center gap-3 bg-white border-2 border-[#BE7E56] px-6 py-3 rounded-full hover:bg-[#BE7E56] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#BE7E56]/10 group-hover:bg-white/20">
+              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#BE7E56]/10 group-hover:bg-white/20 animate-pulse-gentle">
                 <svg className="w-5 h-5 text-[#BE7E56] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" /></svg>
               </span>
               <span className="text-lg font-bold">010-3482-2016</span>
             </a>
 
             <a href="tel:010-8428-2478" className="group flex items-center gap-3 bg-white border-2 border-[#BE7E56] px-6 py-3 rounded-full hover:bg-[#BE7E56] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#BE7E56]/10 group-hover:bg-white/20">
+              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#BE7E56]/10 group-hover:bg-white/20 animate-pulse-gentle">
                 <svg className="w-5 h-5 text-[#BE7E56] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" /></svg>
               </span>
               <span className="text-lg font-bold">010-8428-2478</span>
@@ -78,33 +78,33 @@ const Franchise: React.FC = () => {
           </div>
         </div>
         <div className="grid lg:grid-cols-2 gap-12">
-          <div className="sketch-card bg-white p-8 pt-24 relative overflow-hidden">
+          <div className="sketch-card bg-white p-8 pt-24 relative overflow-hidden lg:col-span-2">
             {/* Decorative Top Bar */}
             <div className="absolute top-0 left-0 w-full h-10 bg-[#BE7E56]/25 flex justify-center items-center gap-4 border-b border-[#BE7E56]/20">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
                 <div key={i} className="w-2.5 h-2.5 rounded-full bg-white border border-[#BE7E56]/30 shadow-inner"></div>
               ))}
             </div>
 
-            <h3 className="text-2xl font-bold text-[#BE7E56] mb-6">개원 자격</h3>
-            <ul className="space-y-3">
+            <h3 className="text-2xl font-bold text-[#BE7E56] mb-8 text-center uppercase tracking-wider">개원 자격</h3>
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
               {qualifications.map((q, i) => (
-                <li key={i} className="flex items-start">
-                  <span className="text-[#BE7E56] mr-3 mt-1">✓</span>
-                  <span>{q}</span>
-                </li>
+                <div key={i} className="flex items-center bg-[#F8F5F2] px-5 py-3 rounded-xl border border-[#BE7E56]/10 shadow-sm transition-transform hover:scale-105">
+                  <span className="text-[#BE7E56] font-bold mr-3 text-xl">✓</span>
+                  <span className="font-semibold text-[#3D3B3A]">{q}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
-          <div className="sketch-card bg-white relative overflow-hidden">
+          <div className="sketch-card bg-white relative overflow-hidden lg:col-span-2">
             {/* Decorative Top Bar */}
             <div className="absolute top-0 left-0 w-full h-10 bg-[#BE7E56]/25 flex justify-center items-center gap-4 border-b border-[#BE7E56]/20">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => (
                 <div key={i} className="w-2.5 h-2.5 rounded-full bg-white border border-[#BE7E56]/30 shadow-inner"></div>
               ))}
             </div>
 
-            <h3 className="text-2xl font-bold text-[#BE7E56] p-6 pt-24 border-b border-gray-300 text-center">자주 묻는 질문</h3>
+            <h3 className="text-2xl font-bold text-[#BE7E56] p-6 pt-24 border-b border-gray-300 text-center uppercase tracking-wider">자주 묻는 질문</h3>
             <div className="pb-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
@@ -118,6 +118,15 @@ const Franchise: React.FC = () => {
             </div>
           </div>
         </div>
+        <style>{`
+          @keyframes pulse-gentle {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+          }
+          .animate-pulse-gentle {
+            animation: pulse-gentle 2s infinite ease-in-out;
+          }
+        `}</style>
       </div>
     </section>
   );
