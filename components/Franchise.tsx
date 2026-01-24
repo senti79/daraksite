@@ -74,7 +74,7 @@ const Franchise: React.FC = () => {
             </ul>
           </div>
           <div className="sketch-card bg-white">
-            <h3 className="text-2xl font-bold text-[#BE7E56] p-6 pt-20 border-b border-gray-300">자주 묻는 질문</h3>
+            <h3 className="text-2xl font-bold text-[#BE7E56] p-6 pt-20 border-b border-gray-300 text-center">자주 묻는 질문</h3>
             <div>
               {faqs.map((faq, index) => (
                 <AccordionItem
