@@ -26,16 +26,10 @@ const Header: React.FC = () => {
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }} className="flex items-center gap-4 group">
-          <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-            <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-sm">
-              {/* House Roof & Outline in Warm Brown */}
-              <path d="M10 45 L50 15 L90 45 L90 85 L10 85 Z" fill="none" stroke="#92400E" strokeWidth="8" strokeLinejoin="round" />
-              {/* Book Accent in Orange-Brown */}
-              <path d="M20 90 Q50 80 80 90" fill="none" stroke="#D97706" strokeWidth="10" strokeLinecap="round" />
-              <rect x="35" y="45" width="30" height="25" fill="#92400E" opacity="0.8" rx="2" />
-            </svg>
+          <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 overflow-hidden rounded-lg">
+            <img src="/daraksite/darak.png" alt="다락서원 로고" className="w-full h-full object-contain" />
           </div>
-          
+
           <span className="font-black text-xl md:text-2xl text-[#3D3B3A] tracking-tighter transition-colors group-hover:text-[#92400E]">
             책읽는 다락서원
           </span>
@@ -43,10 +37,10 @@ const Header: React.FC = () => {
 
         <nav className="hidden md:flex space-x-8">
           {navLinks.map(link => (
-            <a 
-              key={link.href} 
-              href={link.href} 
-              onClick={(e) => handleLinkClick(e, link.href)} 
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleLinkClick(e, link.href)}
               className="text-gray-600 hover:text-[#92400E] transition-colors duration-300 font-bold text-sm tracking-tight"
             >
               {link.label}
@@ -57,14 +51,14 @@ const Header: React.FC = () => {
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="z-[60] relative header-btn">
             <div className="relative w-6 h-4">
-                 <span className={`block absolute w-full h-0.5 bg-gray-800 left-0 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-45 top-1/2 -translate-y-1/2' : 'top-0'}`}></span>
-                 <span className={`block absolute w-full h-0.5 bg-gray-800 left-0 top-1/2 -translate-y-1/2 transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`}></span>
-                 <span className={`block absolute w-full h-0.5 bg-gray-800 left-0 transition-transform duration-300 ease-in-out ${isOpen ? '-rotate-45 top-1/2 -translate-y-1/2' : 'bottom-0'}`}></span>
+              <span className={`block absolute w-full h-0.5 bg-gray-800 left-0 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-45 top-1/2 -translate-y-1/2' : 'top-0'}`}></span>
+              <span className={`block absolute w-full h-0.5 bg-gray-800 left-0 top-1/2 -translate-y-1/2 transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`block absolute w-full h-0.5 bg-gray-800 left-0 transition-transform duration-300 ease-in-out ${isOpen ? '-rotate-45 top-1/2 -translate-y-1/2' : 'bottom-0'}`}></span>
             </div>
           </button>
         </div>
       </div>
-      
+
       <div className={`md:hidden fixed top-0 left-0 w-full h-screen bg-[#F8F5F2] z-50 transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="flex flex-col items-center justify-center h-full space-y-8">
           {navLinks.map(link => (
