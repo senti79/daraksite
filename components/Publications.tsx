@@ -24,13 +24,8 @@ const publications = [
 ];
 
 const Publications: React.FC = () => {
-    // Get the base URL from Vite (should be '/daraksite/')
-    const base = import.meta.env.BASE_URL;
-    // Helper to ensure path starts and ends correctly
-    const cleanBase = base.endsWith('/') ? base : `${base}/`;
-
     return (
-        <section id="publications" className="py-20 md:py-24 bg-white overflow-hidden">
+        <section id="publications" className="py-20 md:py-24 bg-white relative">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">다락서원 출판 도서</span></h2>
@@ -40,32 +35,32 @@ const Publications: React.FC = () => {
                     {publications.map((pub, index) => (
                         <div key={index} className="grid md:grid-cols-5 gap-10 md:gap-12 items-center">
                             <div className={`md:col-span-2 px-2 md:px-0 w-full ${index % 2 !== 0 ? 'md:order-2' : 'md:order-1'}`}>
-                                <div className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden w-full aspect-[3/4] bg-white relative z-10">
-                                    <Swiper
-                                        modules={[Navigation, Pagination, Autoplay]}
-                                        spaceBetween={10}
-                                        slidesPerView={1}
-                                        navigation
-                                        pagination={{ clickable: true }}
-                                        autoplay={{ delay: 3000, disableOnInteraction: false }}
-                                        loop={true}
-                                        touchReleaseOnEdges={true}
-                                        touchStartPreventDefault={false}
-                                        watchSlidesProgress={true}
-                                        className="w-full h-full"
-                                        style={{ touchAction: 'pan-y' }}
-                                    >
-                                        {pub.images.map((img, i) => (
-                                            <SwiperSlide key={i} className="flex items-center justify-center bg-white">
-                                                <img
-                                                    src={`${cleanBase}${img}`}
-                                                    alt={`${pub.title} image ${i + 1}`}
-                                                    className="w-full h-full object-contain block"
-                                                    loading={i === 0 ? "eager" : "lazy"}
-                                                />
-                                            </SwiperSlide>
-                                        ))}
-                                    </Swiper>
+                                <div className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden w-full relative z-10 bg-white" style={{ paddingBottom: '133.33%' }}>
+                                    <div className="absolute inset-0 w-full h-full">
+                                        <Swiper
+                                            modules={[Navigation, Pagination, Autoplay]}
+                                            spaceBetween={0}
+                                            slidesPerView={1}
+                                            navigation
+                                            pagination={{ clickable: true }}
+                                            autoplay={{ delay: 3000, disableOnInteraction: false }}
+                                            loop={true}
+                                            touchReleaseOnEdges={true}
+                                            touchStartPreventDefault={false}
+                                            className="w-full h-full"
+                                        >
+                                            {pub.images.map((img, i) => (
+                                                <SwiperSlide key={i} className="flex items-center justify-center bg-white h-full inline-block">
+                                                    <img
+                                                        src={`/daraksite/${img}`}
+                                                        alt={`${pub.title} image ${i + 1}`}
+                                                        className="w-full h-full object-contain block"
+                                                        loading="eager"
+                                                    />
+                                                </SwiperSlide>
+                                            ))}
+                                        </Swiper>
+                                    </div>
                                 </div>
                             </div>
                             <div className={`md:col-span-3 text-center md:text-left ${index % 2 !== 0 ? 'md:order-1' : 'md:order-2'}`}>
@@ -88,6 +83,9 @@ const Publications: React.FC = () => {
                 }
                 .swiper-slide {
                     background: white;
+                }
+                .swiper {
+                    touch-action: pan-y !important;
                 }
             `}</style>
         </section>
