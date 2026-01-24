@@ -50,18 +50,21 @@ const Publications: React.FC = () => {
                                     touchStartPreventDefault={false}
                                     className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden w-full aspect-[3/4]"
                                 >
-                                    {pub.images.map((img, i) => (
-                                        <SwiperSlide key={i}>
-                                            <div className="bg-white flex items-center justify-center w-full h-full">
-                                                <img
-                                                    src={`${baseUrl}${img}`}
-                                                    alt={`${pub.title} image ${i + 1}`}
-                                                    className="w-full h-full object-contain"
-                                                    loading="eager"
-                                                />
-                                            </div>
-                                        </SwiperSlide>
-                                    ))}
+                                    {pub.images.map((img, i) => {
+                                        const fullSrc = baseUrl.endsWith('/') ? `${baseUrl}${img}` : `${baseUrl}/${img}`;
+                                        return (
+                                            <SwiperSlide key={i}>
+                                                <div className="bg-white flex items-center justify-center w-full h-full">
+                                                    <img
+                                                        src={fullSrc}
+                                                        alt={`${pub.title} image ${i + 1}`}
+                                                        className="w-full h-full object-contain"
+                                                        loading="eager"
+                                                    />
+                                                </div>
+                                            </SwiperSlide>
+                                        );
+                                    })}
                                 </Swiper>
                             </div>
                             <div className={`md:col-span-3 text-center md:text-left ${index % 2 !== 0 ? 'md:order-1' : 'md:order-2'}`}>
