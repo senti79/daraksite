@@ -37,8 +37,10 @@ const Strengths: React.FC = () => {
             centeredSlides={true}
             navigation
             pagination={{ clickable: true }}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{ delay: 4000, disableOnInteraction: false }}
             loop={true}
+            speed={800}
+            grabCursor={true}
             breakpoints={{
               768: {
                 slidesPerView: 2,
