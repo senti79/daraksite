@@ -18,7 +18,18 @@ const Hero: React.FC = () => {
       const tl = gsap.timeline({ delay: 0.8 });
       tl.fromTo(".typing-letter",
         { display: "none" },
-        { display: "inline-block", stagger: 0.1, ease: "none" }
+        {
+          display: "inline-block",
+          stagger: {
+            each: 0.1,
+            onStart: function () {
+              if (typeof window !== "undefined" && window.navigator && window.navigator.vibrate) {
+                window.navigator.vibrate(10);
+              }
+            }
+          },
+          ease: "none"
+        }
       );
 
       // Blinking cursor animation
