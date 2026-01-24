@@ -74,6 +74,15 @@ const Programs: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">단계별 교육 프로그램</span></h2>
           <p className="mt-4 text-lg text-gray-600 ">"현장의 경험으로 매년 더 좋은 책을 발굴하고 문항을 만듭니다."</p>
+          <div className="mt-8 flex justify-center">
+            <div className="w-full max-w-md overflow-hidden rounded-2xl shadow-lg border-2 border-[#BE7E56]/20">
+              <img
+                src="/daraksite/study.gif"
+                alt="학습 모습 애니메이션"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
