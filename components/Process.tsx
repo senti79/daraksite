@@ -29,7 +29,8 @@ const Process: React.FC = () => {
             <div key={index} className={`mb-12 flex items-center w-full ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
               <div className="md:w-5/12"></div>
               <div className="hidden md:block z-10 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold border-4 border-[#F8F5F2]">{`0${index + 1}`}</div>
-              <div className="w-full md:w-5/12 sketch-card bg-white p-6 pt-20">
+              <div className="w-full md:w-5/12 sketch-card bg-white p-8 pt-16 relative overflow-hidden">
+                <div className="absolute top-8 left-8 w-24 h-1.5 bg-[#BE7E56] rounded-full opacity-80"></div>
                 <h3 className="text-xl font-bold text-[#3D3B3A] mb-2">{step.title}</h3>
                 <p className="text-gray-600">{step.description}</p>
               </div>
@@ -47,11 +48,11 @@ const Process: React.FC = () => {
             <div key={index} className="bg-white rounded-2xl border-2 border-black overflow-hidden group">
               <div className="p-2">
                 <div className="dashed-border">
-                  <img src={item.img} alt={item.level} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"/>
+                  <img src={item.img} alt={item.level} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-bold text-[#D4A373]">{item.level}</h4>
+                <h4 className="text-xl font-bold text-[#BE7E56]">{item.level}</h4>
                 <p className="mt-2 text-gray-700">{item.skills}</p>
               </div>
             </div>
