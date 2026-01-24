@@ -34,7 +34,13 @@ const Branches: React.FC = () => {
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                     {Object.entries(branchesData).map(([district, branches]) => (
-                        <div key={district} className="sketch-card bg-white p-8 pt-20">
+                        <div key={district} className="sketch-card bg-white p-8 pt-24 relative overflow-hidden">
+                            {/* Decorative Top Bar */}
+                            <div className="absolute top-0 left-0 w-full h-10 bg-[#BE7E56]/25 flex justify-center items-center gap-4 border-b border-[#BE7E56]/20">
+                                {[1, 2, 3, 4, 5, 6].map((i) => (
+                                    <div key={i} className="w-2.5 h-2.5 rounded-full bg-white border border-[#BE7E56]/30 shadow-inner"></div>
+                                ))}
+                            </div>
                             <h3 className="text-2xl font-bold text-[#BE7E56] mb-6 border-b-2 border-[#BE7E56] pb-2">{district}</h3>
                             <ul className="space-y-4">
                                 {branches.map(branch => (
