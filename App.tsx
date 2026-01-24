@@ -27,8 +27,8 @@ const App: React.FC = () => {
       });
     }, {
       threshold: 0,
-      // 상하단 30%씩을 제외한 중앙 40% 영역에서만 애니메이션 활성화
-      rootMargin: '-30% 0px -30% 0px'
+      // 상단 마진을 0으로 설정하여 최상단에 도달할 때까지 애니메이션 유지 (하단은 30% 지점에서 시작)
+      rootMargin: '0px 0px -30% 0px'
     });
 
     // Initial check and observation
