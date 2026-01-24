@@ -65,15 +65,17 @@ const Publications: React.FC = () => {
                                     pagination={{ clickable: true }}
                                     autoplay={{ delay: 3000, disableOnInteraction: false }}
                                     loop={true}
+                                    touchReleaseOnEdges={true}
                                     className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden"
                                 >
                                     {pub.images.map((img, i) => (
                                         <SwiperSlide key={i}>
-                                            <div className="bg-white flex items-center justify-center">
+                                            <div className="bg-white flex items-center justify-center min-h-[300px] md:min-h-[400px]">
                                                 <img
                                                     src={img}
                                                     alt={`${pub.title} image ${i + 1}`}
-                                                    className="w-full h-auto object-contain aspect-[3/4]"
+                                                    className="w-full h-full object-contain aspect-[3/4]"
+                                                    loading="eager"
                                                 />
                                             </div>
                                         </SwiperSlide>
