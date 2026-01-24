@@ -29,7 +29,7 @@ const Strengths: React.FC = () => {
           <p className="mt-4 text-lg text-gray-600 font-dodum">책읽는 다락서원만의 독서 교육 철학</p>
         </div>
 
-        <div className="relative px-4 md:px-12">
+        <div className="relative px-4 md:px-16">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
@@ -38,19 +38,18 @@ const Strengths: React.FC = () => {
             pagination={{ clickable: true }}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-              1280: { slidesPerView: 4 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 2 },
             }}
             className="pb-16"
           >
             {strengthsData.map((item, index) => (
               <SwiperSlide key={index} className="h-auto">
                 <div
-                  className="strength-card sketch-card bg-white p-8 pt-20 flex flex-col h-full group"
+                  className="strength-card sketch-card bg-white p-8 pt-28 flex flex-col min-h-[380px] h-full group"
                 >
-                  <div className="absolute top-4 right-6">
-                    <div className="relative w-14 h-14 flex items-center justify-center transition-colors duration-300 overflow-hidden">
+                  <div className="absolute top-6 right-8">
+                    <div className="relative w-16 h-16 flex items-center justify-center transition-colors duration-300 overflow-hidden">
                       <DotLottieReact
                         src={item.lottie}
                         loop
@@ -60,7 +59,7 @@ const Strengths: React.FC = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-bold mb-3 text-[#3D3B3A]">{item.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#3D3B3A]">{item.title}</h3>
                   <p className="text-sm md:text-base text-gray-600 leading-relaxed flex-grow">{item.description}</p>
                 </div>
               </SwiperSlide>
@@ -70,6 +69,15 @@ const Strengths: React.FC = () => {
           <style>{`
             .swiper-button-next, .swiper-button-prev {
               color: #BE7E56 !important;
+              opacity: 0.3 !important;
+              transition: all 0.3s;
+            }
+            .swiper-button-next:hover, .swiper-button-prev:hover {
+              opacity: 1 !important;
+            }
+            .swiper-button-next::after, .swiper-button-prev::after {
+              font-size: 24px !important;
+              font-weight: 900 !important;
             }
             .swiper-pagination-bullet-active {
               background: #BE7E56 !important;
