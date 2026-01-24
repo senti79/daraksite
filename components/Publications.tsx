@@ -12,13 +12,26 @@ const publications = [
     {
         title: '다락서원 동시집',
         tagline: '아이들이 시인이 되는 곳',
-        description: '초등 저학년 아이들이 직접 쓴 동시와 그림을 모았습니다. 아이들의 순수한 마음이 종이에 그대로 담겨, 그 자체가 하나의 아름다운 시가 됩니다.',
+        description: (
+            <>
+                초등 저학년 아이들이 직접 쓴<br className="md:hidden" />
+                동시와 그림을 모았습니다.<br className="md:hidden" />
+                아이들의 순수한 마음이 종이에 그대로 담겨,<br className="md:hidden" />
+                그 자체가 하나의 아름다운 시가 됩니다.
+            </>
+        ),
         images: ['poem_0.png', 'poem_1.png', 'poem_2.png', 'poem_3.png', 'poem_4.png', 'poem_5.png', 'poem_6.png', 'poem_7.png']
     },
     {
         title: '다락서원 독후감',
         tagline: '아이들이 작가가 되는 곳',
-        description: '일 년에 한 번, 아이들이 쓴 최고의 글을 모아 출판합니다. 자신의 글이 책이 되는 놀라운 경험을 통해 작가의 꿈을 키울 수 있습니다.',
+        description: (
+            <>
+                일 년에 한 번, 아이들이 쓴 최고의 글을 모아 출판합니다.<br className="md:hidden" />
+                자신의 글이 책이 되는 놀라운 경험을 통해<br className="md:hidden" />
+                작가의 꿈을 키울 수 있습니다.
+            </>
+        ),
         images: ['review_0.png', 'review_1.png', 'review_2.png', 'review_3.png', 'review_4.png', 'review_5.png', 'review_6.png', 'review_7.png', 'review_8.png', 'review_9.png', 'review_10.png', 'review_11.png']
     }
 ];
@@ -32,7 +45,10 @@ const Publications: React.FC = () => {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">다락서원 출판 도서</span></h2>
-                    <p className="mt-4 text-lg text-gray-600 ">아이들의 상상력과 글솜씨가 책으로 피어납니다.</p>
+                    <p className="mt-4 text-lg text-gray-600 ">
+                        아이들의 상상력과 글솜씨가 <br className="md:hidden" />
+                        책으로 피어납니다.
+                    </p>
                 </div>
                 <div className="space-y-20 md:space-y-24">
                     {publications.map((pub, index) => (

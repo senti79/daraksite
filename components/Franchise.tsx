@@ -59,7 +59,10 @@ const Franchise: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">가맹 문의</span></h2>
-          <p className="mt-4 text-lg text-gray-600 ">책읽는 다락서원과 함께 아이들의 미래를 열어갈 원장님을 모십니다.</p>
+          <p className="mt-4 text-lg text-gray-600 ">
+            책읽는 다락서원과 함께 <br className="md:hidden" />
+            아이들의 미래를 열어갈 원장님을 모십니다.
+          </p>
 
           <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
             <a href="tel:010-3482-2016" className="group flex items-center gap-3 bg-white border-2 border-[#BE7E56] px-6 py-3 rounded-full hover:bg-[#BE7E56] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">

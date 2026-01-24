@@ -115,8 +115,10 @@ const Hero: React.FC = () => {
             {/* Description Text */}
             <div className="hero-desc max-w-xl mx-auto lg:mx-0">
               <p className="text-lg md:text-xl text-gray-600  leading-relaxed">
-                글자만 읽는 것이 아니라 마음으로 이해하는 독서.<br className="hidden md:block" />
-                아이들의 문해력과 사고력의 뿌리를 단단하게 만듭니다.
+                글자만 읽는 것이 아니라 <br className="md:hidden" />
+                마음으로 이해하는 독서.<br />
+                아이들의 문해력과 사고력의 뿌리를 <br className="md:hidden" />
+                단단하게 만듭니다.
               </p>
             </div>
           </div>
