@@ -16,6 +16,10 @@ const App: React.FC = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
+          // 밑줄 애니메이션이 2초 동안 지속되므로, 그에 맞춰 2초간 진동
+          if (typeof window !== "undefined" && window.navigator && window.navigator.vibrate) {
+            window.navigator.vibrate(2000);
+          }
         } else {
           // 화면에서 사라지면 클래스를 제거하여 다음번에 다시 애니메이션이 실행되도록 함
           entry.target.classList.remove('active');
