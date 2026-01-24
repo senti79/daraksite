@@ -16,9 +16,9 @@ const App: React.FC = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          // 밑줄 애니메이션 인지용 아주 짧은 진동 (더 확실하게 20ms로 조정)
+          // 밑줄 애니메이션 인지용 아주 짧은 진동 (10ms로 통일)
           if (typeof window !== "undefined" && window.navigator && window.navigator.vibrate) {
-            window.navigator.vibrate(20);
+            window.navigator.vibrate(10);
           }
         } else {
           // 화면에서 사라지면 클래스를 제거하여 다음번에 다시 애니메이션이 실행되도록 함
