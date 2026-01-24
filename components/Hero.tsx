@@ -58,8 +58,8 @@ const Hero: React.FC = () => {
   // Shared Image Component to avoid repetition logic issues
   const HeroImage = ({ className = "" }: { className?: string }) => (
     <div className={`hero-visual-area relative ${className}`}>
-      <div className="floating-blob absolute -top-10 -left-10 w-40 h-40 bg-[#92400E]/10 rounded-full blur-3xl -z-10"></div>
-      <div className="floating-blob absolute -bottom-10 -right-10 w-32 h-32 bg-[#D97706]/5 rounded-full blur-2xl -z-10"></div>
+      <div className="floating-blob absolute -top-10 -left-10 w-40 h-40 bg-[#F47920]/10 rounded-full blur-3xl -z-10"></div>
+      <div className="floating-blob absolute -bottom-10 -right-10 w-32 h-32 bg-[#F47920]/5 rounded-full blur-2xl -z-10"></div>
 
       <div className="relative group">
         <div className="relative overflow-hidden rounded-[2.5rem] shadow-xl bg-white">
@@ -86,7 +86,7 @@ const Hero: React.FC = () => {
 
           {/* Text Content Area */}
           <div className="w-full lg:w-3/5 text-center lg:text-left z-10">
-            <div className="hero-line-static inline-block mb-6 px-4 py-1.5 rounded-full bg-white border border-[#92400E]/30 text-[#92400E] font-bold text-xs tracking-widest shadow-sm">
+            <div className="hero-line-static inline-block mb-6 px-4 py-1.5 rounded-full bg-white border border-[#F47920]/30 text-[#F47920] font-bold text-xs tracking-widest shadow-sm">
               PREMIUM READING ACADEMY
             </div>
 
@@ -99,13 +99,13 @@ const Hero: React.FC = () => {
               </span>
 
               {/* Brand name with typing animation */}
-              <span className="block text-4xl md:text-5xl lg:text-6xl font-black text-[#92400E] mt-8 flex items-center justify-center lg:justify-start">
+              <span className="block text-4xl md:text-5xl lg:text-6xl font-black text-[#F47920] mt-8 flex items-center justify-center lg:justify-start">
                 {brandText.split("").map((char, i) => (
                   <span key={i} className="typing-letter" style={{ whiteSpace: char === " " ? "pre" : "normal" }}>
                     {char}
                   </span>
                 ))}
-                <span className="typing-cursor ml-1 inline-block w-1.5 h-10 md:h-12 lg:h-14 bg-[#92400E]"></span>
+                <span className="typing-cursor ml-1 inline-block w-1.5 h-10 md:h-12 lg:h-14 bg-[#F47920]"></span>
               </span>
             </h1>
 

@@ -79,8 +79,8 @@ const Strengths: React.FC = () => {
                 className="strength-card sketch-card bg-[#F8F5F2] p-8 pt-20 flex flex-col group"
               >
                 <div className="absolute top-4 left-6">
-                  <div className="relative w-12 h-12 flex items-center justify-center bg-white rounded-full border-2 border-[#3D3B3A] shadow-[2px_2px_0px_0px_#3D3B3A] group-hover:bg-[#92400E] group-hover:text-white transition-colors duration-300">
-                    <div className="absolute inset-0 bg-[#92400E] opacity-0 group-hover:opacity-10 rounded-full transition-opacity"></div>
+                  <div className="relative w-12 h-12 flex items-center justify-center bg-white rounded-full border-2 border-[#3D3B3A] shadow-[2px_2px_0px_0px_#3D3B3A] group-hover:bg-[#F47920] group-hover:text-white transition-colors duration-300">
+                    <div className="absolute inset-0 bg-[#F47920] opacity-0 group-hover:opacity-10 rounded-full transition-opacity"></div>
                     {item.icon}
                   </div>
                 </div>
