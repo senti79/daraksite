@@ -25,7 +25,7 @@ const Strengths: React.FC = () => {
     <section id="strengths" className="py-20 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">무엇이 <span className="text-highlight">다를까요?</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">무엇이 다를까요?</span></h2>
           <p className="mt-4 text-lg text-gray-600 ">책읽는 다락서원만의 독서 교육 철학</p>
         </div>
 
@@ -68,7 +68,7 @@ const Strengths: React.FC = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-2xl md:text-2xl font-bold mb-4 text-[#3D3B3A]">{item.title}</h3>
+                  <h3 className="text-2xl md:text-2xl font-bold mb-4 text-[#BE7E56]">{item.title}</h3>
                   <p className="text-base md:text-base text-gray-600 leading-relaxed flex-grow">{item.description}</p>
                 </div>
               </SwiperSlide>
