@@ -31,7 +31,7 @@ const Process: React.FC = () => {
               <div className="hidden md:block z-10 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold border-4 border-[#F8F5F2]">{`0${index + 1}`}</div>
               <div className="w-full md:w-5/12 sketch-card bg-white p-8 pt-16 relative overflow-hidden group">
                 {/* Notebook Binder Style Accent */}
-                <div className="absolute top-0 left-0 w-full h-8 bg-[#F8F5F2]/50 flex justify-center items-center gap-4">
+                <div className="absolute top-0 left-0 w-full h-8 bg-[#F1EDE9] flex justify-center items-center gap-4">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <div key={i} className="w-2 h-2 rounded-full bg-white border border-[#3D3B3A]/10 shadow-[inner_1px_1px_1px_rgba(0,0,0,0.05)]"></div>
                   ))}
