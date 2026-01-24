@@ -26,10 +26,10 @@ const Strengths: React.FC = () => {
           {strengthsData.map((item, index) => (
             <div
               key={index}
-              className="strength-card sketch-card bg-[#F8F5F2] p-8 pt-20 flex flex-col group"
+              className="strength-card sketch-card bg-white p-8 pt-20 flex flex-col group"
             >
-              <div className="absolute top-4 left-6">
-                <div className="relative w-14 h-14 flex items-center justify-center bg-white rounded-full border-2 border-[#3D3B3A] shadow-[2px_2px_0px_0px_#3D3B3A] transition-colors duration-300 overflow-hidden">
+              <div className="absolute top-4 right-6">
+                <div className="relative w-14 h-14 flex items-center justify-center transition-colors duration-300 overflow-hidden">
                   <DotLottieReact
                     src={item.lottie}
                     loop
