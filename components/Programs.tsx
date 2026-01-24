@@ -4,9 +4,9 @@ import gsap from 'gsap';
 
 const programData = {
   '초등 저학년': [
-    { name: '초등 봄 1 (10단계)', description: '우리말의 아름다움을 담은 책 80여 권을 읽고 씁니다.', color: 'border-[#F47920]' },
-    { name: '초등 봄 2 (10단계)', description: '인문을 넘어 사회로 시각을 확장하는 책 80여 권을 읽고 씁니다.', color: 'border-[#F47920]' },
-    { name: '초등 여름 1 (10단계)', description: '인문, 사회, 과학 등 다양한 분야의 책 80여 권을 읽고 씁니다.', color: 'border-[#F47920]' },
+    { name: '초등 봄 1 (10단계)', description: '우리말의 아름다움을 담은 책 80여 권을 읽고 씁니다.', color: 'border-[#E27D37]' },
+    { name: '초등 봄 2 (10단계)', description: '인문을 넘어 사회로 시각을 확장하는 책 80여 권을 읽고 씁니다.', color: 'border-[#E27D37]' },
+    { name: '초등 여름 1 (10단계)', description: '인문, 사회, 과학 등 다양한 분야의 책 80여 권을 읽고 씁니다.', color: 'border-[#E27D37]' },
   ],
   '초등 고학년': [
     { name: '초등 여름 2 (9단계)', description: '인문, 사회, 과학, 예술, 철학 등 72여 권을 읽고 씁니다.', color: 'border-[#B45309]' },
@@ -14,13 +14,13 @@ const programData = {
     { name: '초등 겨울 (9단계)', description: '중등 교과 연계 도서 위주로 72여 권을 읽고 씁니다.', color: 'border-[#B45309]' },
   ],
   '중등': [
-    { name: '중등 봄 (9단계)', description: '중·고등 교과 수록 인문, 사회, 과학 도서 70여 권을 읽습니다.', color: 'border-[#F47920]' },
-    { name: '중등 여름 (6단계)', description: '고등 내신 및 수능 독서 완벽 대비를 위한 40여 권을 읽습니다.', color: 'border-[#F47920]' },
+    { name: '중등 봄 (9단계)', description: '중·고등 교과 수록 인문, 사회, 과학 도서 70여 권을 읽습니다.', color: 'border-[#E27D37]' },
+    { name: '중등 여름 (6단계)', description: '고등 내신 및 수능 독서 완벽 대비를 위한 40여 권을 읽습니다.', color: 'border-[#E27D37]' },
   ],
   '역사': [
-    { name: '초등 한국사', description: '구석기부터 근현대사까지 책 50여 권으로 한국사 흐름을 잡습니다.', color: 'border-[#F47920]' },
-    { name: '중등 한국사', description: '선사시대부터 근현대까지, 중등 한국사를 한 번에 끝냅니다.', color: 'border-[#F47920]' },
-    { name: '중등 세계사', description: '선사시대부터 근현대사까지, 중·고등 세계사를 한 번에 끝냅니다.', color: 'border-[#F47920]' },
+    { name: '초등 한국사', description: '구석기부터 근현대사까지 책 50여 권으로 한국사 흐름을 잡습니다.', color: 'border-[#E27D37]' },
+    { name: '중등 한국사', description: '선사시대부터 근현대까지, 중등 한국사를 한 번에 끝냅니다.', color: 'border-[#E27D37]' },
+    { name: '중등 세계사', description: '선사시대부터 근현대사까지, 중·고등 세계사를 한 번에 끝냅니다.', color: 'border-[#E27D37]' },
   ],
 };
 
@@ -54,7 +54,7 @@ const Programs: React.FC = () => {
               key={tab}
               onClick={() => setActiveTab(tab as Category)}
               className={`px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
-                activeTab === tab ? 'bg-[#F47920] text-white shadow-lg' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                activeTab === tab ? 'bg-[#E27D37] text-white shadow-lg' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >
               {tab}

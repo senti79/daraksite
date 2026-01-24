@@ -35,12 +35,12 @@ const Branches: React.FC = () => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
                     {Object.entries(branchesData).map(([district, branches]) => (
                         <div key={district} className="sketch-card bg-white p-8 pt-20">
-                            <h3 className="text-2xl font-bold text-[#F47920] mb-6 border-b-2 border-[#F47920] pb-2">{district}</h3>
+                            <h3 className="text-2xl font-bold text-[#E27D37] mb-6 border-b-2 border-[#E27D37] pb-2">{district}</h3>
                             <ul className="space-y-4">
                                 {branches.map(branch => (
                                     <li key={branch.name} className="flex justify-between items-center">
                                         <span className="text-gray-800 font-semibold">{branch.name}</span>
-                                        <a href={`tel:${branch.phone}`} className="text-gray-600 hover:text-[#F47920] transition-colors">{branch.phone}</a>
+                                        <a href={`tel:${branch.phone}`} className="text-gray-600 hover:text-[#E27D37] transition-colors">{branch.phone}</a>
                                     </li>
                                 ))}
                             </ul>
