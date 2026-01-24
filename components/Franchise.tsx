@@ -63,7 +63,7 @@ const Franchise: React.FC = () => {
         </div>
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="sketch-card bg-white p-8 pt-20">
-            <h3 className="text-2xl font-bold text-[#3D3B3A] mb-6">개원 자격</h3>
+            <h3 className="text-2xl font-bold text-[#BE7E56] mb-6">개원 자격</h3>
             <ul className="space-y-3">
               {qualifications.map((q, i) => (
                 <li key={i} className="flex items-start">
@@ -74,7 +74,7 @@ const Franchise: React.FC = () => {
             </ul>
           </div>
           <div className="sketch-card bg-white">
-            <h3 className="text-2xl font-bold text-[#3D3B3A] p-6 pt-20 border-b border-gray-300">자주 묻는 질문</h3>
+            <h3 className="text-2xl font-bold text-[#BE7E56] p-6 pt-20 border-b border-gray-300">자주 묻는 질문</h3>
             <div>
               {faqs.map((faq, index) => (
                 <AccordionItem
