@@ -61,10 +61,10 @@ const Process: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-            <img src="/daraksite/test1.png" alt="문해력 테스트 샘플 1" className="w-full h-auto transition-transform duration-500 hover:scale-105" />
+            <img src="/daraksite/test2.png" alt="문해력 테스트 샘플 2" className="w-full h-auto transition-transform duration-500 hover:scale-105" />
           </div>
           <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-            <img src="/daraksite/test2.png" alt="문해력 테스트 샘플 2" className="w-full h-auto transition-transform duration-500 hover:scale-105" />
+            <img src="/daraksite/test1.png" alt="문해력 테스트 샘플 1" className="w-full h-auto transition-transform duration-500 hover:scale-105" />
           </div>
         </div>
       </div>
