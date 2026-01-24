@@ -52,7 +52,7 @@ const Process: React.FC = () => {
 
         <div className="text-center mt-24 mb-16">
           <h3 className="text-2xl md:text-3xl font-bold text-[#3D3B3A]">
-            <span className="text-highlight scroll-underline after:animate-none">문해력 테스트</span>
+            <span className="text-highlight">문해력 테스트</span>
           </h3>
           <p className="mt-4 text-lg text-gray-600 ">
             다락서원에서 개발한 <br className="md:hidden" />
