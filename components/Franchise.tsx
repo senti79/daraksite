@@ -62,20 +62,34 @@ const Franchise: React.FC = () => {
           <p className="mt-4 text-lg text-gray-600 ">책읽는 다락서원과 함께 아이들의 미래를 열어갈 원장님을 모십니다.</p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12">
-          <div className="sketch-card bg-white p-8 pt-20">
+          <div className="sketch-card bg-white p-8 pt-24 relative overflow-hidden">
+            {/* Decorative Top Bar */}
+            <div className="absolute top-0 left-0 w-full h-10 bg-[#BE7E56]/10 flex justify-center items-center gap-4 border-b border-[#BE7E56]/20">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="w-2.5 h-2.5 rounded-full bg-white border border-[#BE7E56]/30 shadow-inner"></div>
+              ))}
+            </div>
+
             <h3 className="text-2xl font-bold text-[#BE7E56] mb-6">개원 자격</h3>
             <ul className="space-y-3">
               {qualifications.map((q, i) => (
                 <li key={i} className="flex items-start">
-                  <span className="text-[#D4A373] mr-3 mt-1">✓</span>
+                  <span className="text-[#BE7E56] mr-3 mt-1">✓</span>
                   <span>{q}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="sketch-card bg-white">
-            <h3 className="text-2xl font-bold text-[#BE7E56] p-6 pt-20 border-b border-gray-300 text-center">자주 묻는 질문</h3>
-            <div>
+          <div className="sketch-card bg-white relative overflow-hidden">
+            {/* Decorative Top Bar */}
+            <div className="absolute top-0 left-0 w-full h-10 bg-[#BE7E56] flex justify-center items-center gap-4">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="w-2.5 h-2.5 rounded-full bg-white/30 border border-white/20"></div>
+              ))}
+            </div>
+
+            <h3 className="text-2xl font-bold text-[#BE7E56] p-6 pt-24 border-b border-gray-300 text-center">자주 묻는 질문</h3>
+            <div className="pb-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
                   key={index}
