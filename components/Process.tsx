@@ -52,7 +52,7 @@ const Process: React.FC = () => {
 
         <div className="text-center mt-24 mb-16">
           <h3 className="text-2xl md:text-3xl font-bold text-[#3D3B3A]"><span className="text-highlight">문해력 테스트</span></h3>
-          <p className="mt-4 text-lg text-gray-600 ">국내 최초 100% 서술형 테스트</p>
+          <p className="mt-4 text-lg text-gray-600 ">다락서원에서 개발한 국내 최초 100% 서술형 테스트로 문해력을 정확히 진단해드립니다.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
