@@ -24,6 +24,9 @@ const publications = [
 ];
 
 const Publications: React.FC = () => {
+    const base = import.meta.env.BASE_URL;
+    const cleanBase = base.endsWith('/') ? base : `${base}/`;
+
     return (
         <section id="publications" className="py-20 md:py-24 bg-white">
             <div className="container mx-auto px-6">
@@ -35,30 +38,37 @@ const Publications: React.FC = () => {
                     {publications.map((pub, index) => (
                         <div key={index} className="grid md:grid-cols-5 gap-10 md:gap-12 items-center">
                             <div className={`md:col-span-2 w-full ${index % 2 !== 0 ? 'md:order-2' : 'md:order-1'}`}>
-                                <div className="rounded-2xl shadow-xl border-4 border-[#BE7E56]/10 overflow-hidden relative bg-white"
-                                    style={{ aspectRatio: '3/4', touchAction: 'pan-y' }}>
-                                    <Swiper
-                                        modules={[Navigation, Pagination, Autoplay]}
-                                        spaceBetween={0}
-                                        slidesPerView={1}
-                                        navigation
-                                        pagination={{ clickable: true }}
-                                        autoplay={{ delay: 3000, disableOnInteraction: false }}
-                                        loop={true}
-                                        touchStartPreventDefault={false}
-                                        className="w-full h-full"
-                                    >
-                                        {pub.images.map((img, i) => (
-                                            <SwiperSlide key={i} className="flex items-center justify-center bg-white h-full">
-                                                <img
-                                                    src={`/daraksite/${img}`}
-                                                    alt={`${pub.title} image ${i + 1}`}
-                                                    className="w-full h-full object-contain"
-                                                    loading="eager"
-                                                />
-                                            </SwiperSlide>
-                                        ))}
-                                    </Swiper>
+                                <div className="rounded-2xl shadow-xl border-2 md:border-4 border-[#BE7E56]/10 overflow-hidden relative bg-white"
+                                    style={{ touchAction: 'pan-y' }}>
+                                    <div className="relative w-full pb-[133.33%]">
+                                        <div className="absolute inset-0">
+                                            <Swiper
+                                                modules={[Navigation, Pagination, Autoplay]}
+                                                spaceBetween={0}
+                                                slidesPerView={1}
+                                                navigation
+                                                pagination={{ clickable: true }}
+                                                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                                                loop={true}
+                                                touchStartPreventDefault={false}
+                                                touchMoveStopPropagation={false}
+                                                touchReleaseOnEdges={true}
+                                                className="w-full h-full"
+                                            >
+                                                {pub.images.map((img, i) => (
+                                                    <SwiperSlide key={i} className="flex items-center justify-center bg-white h-full">
+                                                        <img
+                                                            src={`${cleanBase}${img}`}
+                                                            alt={`${pub.title} image ${i + 1}`}
+                                                            className="w-full h-full object-contain"
+                                                            loading="eager"
+                                                            decoding="async"
+                                                        />
+                                                    </SwiperSlide>
+                                                ))}
+                                            </Swiper>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className={`md:col-span-3 text-center md:text-left ${index % 2 !== 0 ? 'md:order-1' : 'md:order-2'}`}>
@@ -78,6 +88,9 @@ const Publications: React.FC = () => {
                 }
                 #publications .swiper-pagination-bullet-active {
                     background: #BE7E56 !important;
+                }
+                .swiper {
+                    touch-action: pan-y !important;
                 }
             `}</style>
         </section>
