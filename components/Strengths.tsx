@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -21,8 +21,34 @@ const strengthsData = [
 ];
 
 const Strengths: React.FC = () => {
+  const swiperRef = React.useRef<any>(null);
+  const sectionRef = React.useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (swiperRef.current && swiperRef.current.autoplay) {
+            if (entry.isIntersecting) {
+              swiperRef.current.autoplay.start();
+            } else {
+              swiperRef.current.autoplay.stop();
+            }
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="strengths" className="py-20 md:py-24 bg-white overflow-hidden">
+    <section ref={sectionRef} id="strengths" className="py-20 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">무엇이 다를까요?</span></h2>
@@ -31,6 +57,9 @@ const Strengths: React.FC = () => {
 
         <div className="relative px-2 md:px-20">
           <Swiper
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={20}
             slidesPerView={1.15}

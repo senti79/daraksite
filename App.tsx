@@ -42,9 +42,23 @@ const App: React.FC = () => {
     // For dynamic content if any
     const timeoutId = setTimeout(observeElements, 1000);
 
+    // 사용자의 첫 터치 시 진동 권한 획득을 위한 이벤트 리스너
+    const handleFirstTouch = () => {
+      if (typeof window !== "undefined" && window.navigator && window.navigator.vibrate) {
+        window.navigator.vibrate(1); // 아주 짧은 진동으로 권한 획득 유도
+      }
+      window.removeEventListener('touchstart', handleFirstTouch);
+      window.removeEventListener('mousedown', handleFirstTouch);
+    };
+
+    window.addEventListener('touchstart', handleFirstTouch);
+    window.addEventListener('mousedown', handleFirstTouch);
+
     return () => {
       observer.disconnect();
       clearTimeout(timeoutId);
+      window.removeEventListener('touchstart', handleFirstTouch);
+      window.removeEventListener('mousedown', handleFirstTouch);
     };
   }, []);
 
