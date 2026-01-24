@@ -3,31 +3,34 @@ import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 const programData = {
-  '초등 저학년': [
-    { name: '초등 봄 1 (10단계)', description: '우리말의 아름다움을 담은 책 80여 권을 읽고 씁니다.', color: 'border-[#BE7E56]' },
-    { name: '초등 봄 2 (10단계)', description: '인문을 넘어 사회로 시각을 확장하는 책 80여 권을 읽고 씁니다.', color: 'border-[#BE7E56]' },
-    { name: '초등 여름 1 (10단계)', description: '인문, 사회, 과학 등 다양한 분야의 책 80여 권을 읽고 씁니다.', color: 'border-[#BE7E56]' },
-  ],
-  '초등 고학년': [
-    { name: '초등 여름 2 (9단계)', description: '인문, 사회, 과학, 예술, 철학 등 72여 권을 읽고 씁니다.', color: 'border-[#BE7E56]' },
-    { name: '초등 가을 (10단계)', description: '물, 화, 생, 지, 경제, 법 등 심화 분야 80여 권을 읽고 씁니다.', color: 'border-[#BE7E56]' },
-    { name: '초등 겨울 (9단계)', description: '중등 교과 연계 도서 위주로 72여 권을 읽고 씁니다.', color: 'border-[#BE7E56]' },
+  '초등': [
+    { name: '초등 새봄(10단계)', description: '우리말의 어휘와 문장, 이야기를 담은 책 80권을 읽고 글을 씁니다.', color: 'border-[#BE7E56]' },
+    { name: '초등 봄(10단계)', description: '인문을 넘어 사회로 확장한 80권을 읽고 글을 씁니다.', color: 'border-[#BE7E56]' },
+    { name: '초등 여름(10단계)', description: '인문, 사회, 과학 등 다양한 분야의 책 80권을 읽고 글을 씁니다.', color: 'border-[#BE7E56]' },
+    { name: '초등 가을(9단계)', description: '인문, 사회, 과학, 예술, 철학 등 다양한 분야의 책 72권을 읽고 글을 씁니다.', color: 'border-[#BE7E56]' },
+    { name: '초등 겨울(9단계)', description: '인문, 과학, 사회, 경제, 예술, 법, 철학, 역사 분야의 책 72권을 읽고 글을 씁니다.', color: 'border-[#BE7E56]' },
+    { name: '초등 한국사(6단계)', description: '구석기에서 근현대사까지 책 50권을 읽고 글을 씁니다.', color: 'border-[#BE7E56]' },
+    { name: '예비 중등 교과 연계(12단계)', description: '국어, 인문, 사회, 과학 등 중등 교과에 수록된 책 위주로 65권을 읽고 글을 씁니다.', color: 'border-[#BE7E56]' },
   ],
   '중등': [
-    { name: '중등 봄 (9단계)', description: '중·고등 교과 수록 인문, 사회, 과학 도서 70여 권을 읽습니다.', color: 'border-[#BE7E56]' },
-    { name: '중등 여름 (6단계)', description: '고등 내신 및 수능 독서 완벽 대비를 위한 40여 권을 읽습니다.', color: 'border-[#BE7E56]' },
+    { name: '국어 연계(중등 2, 3학년)', description: '2022년 개정 교육 국어 작품을 이해, 글쓰기까지 완성합니다.', color: 'border-[#BE7E56]' },
+    { name: '중등 봄(8단계)', description: '중.고등 교과에 수록된 인문, 사회, 과학 분야 책 50여 권을 읽고 글을 씁니다.', color: 'border-[#BE7E56]' },
+    { name: '중등 여름(5단계)', description: '고등 내신 및 모의고사 대비, 수능 완벽 대비 책 30여 권을 읽고 글을 씁니다.', color: 'border-[#BE7E56]' },
+    { name: '중등 한국사', description: '중학교 한국사 한 번에 완성합니다. (한국사 편지 전권)', color: 'border-[#BE7E56]' },
+    { name: '중등 세계사', description: '중학교 세계사 한 번에 완성합니다. (공부가 되는 세계사 전권)', color: 'border-[#BE7E56]' },
   ],
-  '역사': [
-    { name: '초등 한국사', description: '구석기부터 근현대사까지 책 50여 권으로 한국사 흐름을 잡습니다.', color: 'border-[#BE7E56]' },
-    { name: '중등 한국사', description: '선사시대부터 근현대까지, 중등 한국사를 한 번에 끝냅니다.', color: 'border-[#BE7E56]' },
-    { name: '중등 세계사', description: '선사시대부터 근현대사까지, 중·고등 세계사를 한 번에 끝냅니다.', color: 'border-[#BE7E56]' },
+  '고등': [
+    { name: '고등 국어 연계(5권)', description: '2022년 개정 고등 국어 작품 30여 작품을 이해, 글쓰기까지 완성합니다.', color: 'border-[#BE7E56]' },
+    { name: '고전을 읽다(2권)', description: '『총균쇠』, 『사피엔스』, 『죽음의 수용소에서』, 『흠흠신서』 등 동서양 고전 (고등학교 생기부에 활용)', color: 'border-[#BE7E56]' },
+    { name: '고등 봄(5단계)', description: '고등 심화 내신 및 모의고사 수록 작품 위주의 책 25권을 읽고 글을 씁니다.', color: 'border-[#BE7E56]' },
+    { name: '고등 여름(5단계)', description: '청소년 토지 12권을 비롯한 인문, 철학 위주의 책 30여 권을 읽고 글을 씁니다.', color: 'border-[#BE7E56]' },
   ],
 };
 
 type Category = keyof typeof programData;
 
 const Programs: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<Category>('초등 저학년');
+  const [activeTab, setActiveTab] = useState<Category>('초등');
   const cardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -44,7 +47,7 @@ const Programs: React.FC = () => {
     <section id="programs" className="py-20 md:py-32 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">성장 단계별 교육 프로그램</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">단계별 교육 프로그램</span></h2>
           <p className="mt-4 text-lg text-gray-600 ">"현장의 경험으로 매년 더 좋은 책을 발굴하고 문항을 만듭니다."</p>
         </div>
 
