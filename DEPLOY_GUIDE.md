@@ -60,5 +60,32 @@ npm install -g gh-pages
 - **배포 주소**: [https://senti79.github.io/daraksite/](https://senti79.github.io/daraksite/)
 - **업데이트 방법**: 코드 수정 후 `git push`를 통해 `main` 브랜치를 업데이트하고, 다시 한 번 `npm run build`와 `gh-pages -d dist`를 실행하면 사이트에 반영됩니다.
 
+## 5. 자산(Assets) 사용 규칙 (이미지, 로티 파일 등)
+
+GitHub Pages 배포 특성상 자산을 참조할 때 아래 규칙을 준수해야 합니다.
+
+### 5.1 파일 위치
+모든 정적 자산(이미지, 로티 애니메이션 파일 등)은 로컬 프로젝트의 **`public/`** 폴더에 넣습니다.
+- 예: `public/darak.png`, `public/animation.lottie`
+
+### 5.2 코드 내 경로 설정
+코드에서 파일을 불러올 때는 반드시 앞에 **/daraksite/** 를 붙여야 합니다.
+
+- **이미지 예시**:
+  ```tsx
+  <img src="/daraksite/darak.png" />
+  ```
+
+- **로티(Lottie) 애니메이션 예시**:
+  ```tsx
+  import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
+  <DotLottieReact
+    src="/daraksite/animation.lottie"
+    loop
+    autoplay
+  />
+  ```
+
 ---
 *작성일: 2026-01-24*
