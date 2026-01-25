@@ -78,6 +78,16 @@
       transition: width 2s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
+    /* Mobile-specific Visibility Improvement */
+    @media (max-width: 768px) {
+      .text-highlight::before {
+        opacity: 0.5;
+        /* Higher visibility on mobile */
+        height: 45%;
+        /* Slightly thicker for better visibility */
+      }
+    }
+
     .text-highlight.active::before {
       width: 110%;
     }
@@ -99,6 +109,31 @@
     .bg-pattern {
       background-image: radial-gradient(#BE7E56 1px, transparent 1px);
       background-size: 32px 32px;
+    }
+
+    /* Accent Colors Utility */
+    .text-accent-green {
+      color: #2D5A27;
+    }
+
+    .bg-accent-green {
+      background-color: #2D5A27;
+    }
+
+    .border-accent-green {
+      border-color: #2D5A27;
+    }
+
+    .text-accent-orange {
+      color: #D35400;
+    }
+
+    .bg-accent-orange {
+      background-color: #D35400;
+    }
+
+    .border-accent-orange {
+      border-color: #D35400;
     }
 
     /* Scroll Underline Animation */

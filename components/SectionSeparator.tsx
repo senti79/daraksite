@@ -19,7 +19,7 @@ const SectionSeparator: React.FC = () => {
                     color: #3D3B3A;
                 }
                 .separator-dot.active {
-                    color: #BE7E56;
+                    color: #D35400; /* Burnt Orange */
                     opacity: 0.8;
                     animation: dot-jelly 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
                 }
