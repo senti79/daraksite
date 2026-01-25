@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
               {/* Scroll Inducer - Encourages 'Click' to unlock Vibration API */}
               <div
                 onClick={() => document.getElementById('strengths')?.scrollIntoView({ behavior: 'smooth' })}
-                className="mt-12 lg:mt-20 flex flex-col items-center lg:items-start gap-3 cursor-pointer group animate-fade-in-delayed"
+                className="mt-12 lg:mt-36 flex flex-col items-center lg:items-start gap-3 cursor-pointer group animate-fade-in-delayed"
               >
                 <div className="flex items-center gap-4">
                   <div className="relative w-6 h-10 rounded-full border-2 border-accent-orange/40 flex justify-center p-1.5 transition-colors group-hover:border-accent-orange">
