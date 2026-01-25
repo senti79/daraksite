@@ -87,7 +87,7 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
           {/* Desktop Visual Area (Left) */}
-          <HeroImage className="hidden lg:block lg:w-2/5 lg:-mt-10" />
+          <HeroImage className="hidden lg:block lg:w-2/5 lg:-mt-2" />
 
           {/* Text Content Area */}
           <div className="w-full lg:w-3/5 text-center lg:text-left z-10">
