@@ -29,7 +29,7 @@ const Process: React.FC = () => {
         <div className="relative">
           <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-black/80 transform -translate-x-1/2"></div>
           {processSteps.map((step, index) => (
-            <div key={index} className={`mb-12 flex items-center w-full ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+            <div key={index} className={`mb-12 ${index === processSteps.length - 1 ? 'md:mb-32' : 'md:mb-12'} flex items-center w-full ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
               <div className="md:w-5/12"></div>
               <div className="hidden md:block z-10 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-bold border-4 border-white">{`0${index + 1}`}</div>
               <div className="w-full md:w-5/12 sketch-card bg-white p-8 pt-24 relative overflow-hidden group">
