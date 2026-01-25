@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-[#F8F5F2] sticky top-0 z-[100] border-b border-gray-200/50 backdrop-blur-sm bg-[#F8F5F2]/90">
+    <header className="bg-white sticky top-0 z-[100] border-b border-gray-200/50 backdrop-blur-sm bg-white/90">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#" onClick={(e) => {
           e.preventDefault();
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      <div className={`md:hidden fixed top-0 left-0 w-full h-screen bg-[#F8F5F2] z-50 transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0 opacity-100 pointer-events-auto' : '-translate-x-full opacity-0 pointer-events-none'}`}>
+      <div className={`md:hidden fixed top-0 left-0 w-full h-screen bg-white z-50 transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0 opacity-100 pointer-events-auto' : '-translate-x-full opacity-0 pointer-events-none'}`}>
         <div className="flex flex-col items-center justify-center h-full space-y-8">
           {navLinks.map(link => (
             <a key={link.href} href={link.href} onClick={(e) => handleLinkClick(e, link.href)} className="text-2xl font-bold text-gray-800 hover:text-[#BE7E56] transition-colors duration-300">{link.label}</a>

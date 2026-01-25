@@ -123,7 +123,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-[#F8F5F2] min-h-screen">
+    <div className="bg-white min-h-screen">
       <div className="max-w-5xl mx-auto">
         <Header />
         <main>

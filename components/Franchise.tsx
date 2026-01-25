@@ -101,7 +101,7 @@ const Franchise: React.FC = () => {
             </div>
             <div className="flex flex-col md:flex-row md:flex-wrap justify-start gap-3 md:gap-6">
               {qualifications.map((q, i) => (
-                <div key={i} className="flex items-center bg-[#F8F5F2] px-4 md:px-5 py-3 rounded-xl border border-[#BE7E56]/10 shadow-sm transition-transform hover:scale-105 w-full md:w-auto">
+                <div key={i} className="flex items-center bg-white px-4 md:px-5 py-3 rounded-xl border border-gray-200 shadow-sm transition-transform hover:scale-105 w-full md:w-auto">
                   <span className="text-[#BE7E56] font-bold mr-3 text-xl">✓</span>
                   <span className="font-semibold text-[#3D3B3A] text-sm md:text-base">{q}</span>
                 </div>
