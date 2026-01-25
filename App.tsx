@@ -9,6 +9,7 @@ import Programs from './components/Programs';
 import Publications from './components/Publications';
 import Franchise from './components/Franchise';
 import Footer from './components/Footer';
+import SectionSeparator from './components/SectionSeparator';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -127,11 +128,17 @@ const App: React.FC = () => {
         <Header />
         <main>
           <Hero />
+          <SectionSeparator />
           <Strengths />
+          <SectionSeparator />
           <Process />
+          <SectionSeparator />
           <Programs />
+          <SectionSeparator />
           <Branches />
+          <SectionSeparator />
           <Publications />
+          <SectionSeparator />
           <Franchise />
         </main>
         <Footer />

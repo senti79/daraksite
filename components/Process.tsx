@@ -1,5 +1,5 @@
-
 import React, { useEffect } from 'react';
+import SectionSeparator from './SectionSeparator';
 
 const processSteps = [
   { title: '독서 & 문해력 테스트', description: '입회 시 개인별 독서 능력을 정밀하게 진단합니다.' },
@@ -50,7 +50,9 @@ const Process: React.FC = () => {
           ))}
         </div>
 
-        <div className="text-center mt-24 md:mt-40 mb-16">
+        <SectionSeparator />
+
+        <div className="text-center mt-12 md:mt-20 mb-16">
           <h3 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">
             <span className="text-highlight">문해력 테스트</span>
           </h3>
