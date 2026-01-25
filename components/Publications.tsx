@@ -33,8 +33,10 @@ const publications = [
         description: (
             <>
                 <span className="md:hidden">
-                    일 년에 한 번,<br />
-                    아이들이 쓴 최고의 글을 모아 출판합니다.
+                    일 년에 한 번, 아이들이 쓴<br />
+                    최고의 글을 모아 출판합니다.<br /><br />
+                    자신의 글이 책이 되는 놀라운 경험을 통해<br />
+                    작가의 꿈을 키울 수 있습니다.
                 </span>
                 <span className="hidden md:inline">
                     일 년에 한 번, 아이들이 쓴 최고의 글을 모아 출판합니다. 자신의 글이 책이 되는 놀라운 경험을 통해 작가의 꿈을 키울 수 있습니다.
