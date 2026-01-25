@@ -1,6 +1,6 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const qualifications = [
   '책과 글쓰기를 사랑하는 분',
@@ -89,7 +89,16 @@ const Franchise: React.FC = () => {
               ))}
             </div>
 
-            <h3 className="text-2xl font-bold text-[#BE7E56] mb-8 text-center uppercase tracking-wider">개원 자격</h3>
+            <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+              <h3 className="text-2xl font-bold text-[#BE7E56] uppercase tracking-wider">개원 자격</h3>
+              <div className="w-20 h-20 md:w-24 md:h-24">
+                <DotLottieReact
+                  src="/daraksite/human-resources.json"
+                  loop
+                  autoplay
+                />
+              </div>
+            </div>
             <div className="flex flex-col md:flex-row md:flex-wrap justify-start gap-3 md:gap-6">
               {qualifications.map((q, i) => (
                 <div key={i} className="flex items-center bg-[#F8F5F2] px-4 md:px-5 py-3 rounded-xl border border-[#BE7E56]/10 shadow-sm transition-transform hover:scale-105 w-full md:w-auto">
