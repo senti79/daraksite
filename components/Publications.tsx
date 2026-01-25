@@ -97,7 +97,7 @@ const Publications: React.FC = () => {
                                 </div>
                             </div>
                             <div className={`md:col-span-3 text-center md:text-left ${index % 2 !== 0 ? 'md:order-1' : 'md:order-2'}`}>
-                                <span className=" text-[#D4A373] font-semibold text-sm md:text-base">{pub.tagline}</span>
+                                <span className=" text-[#065F46] font-semibold text-sm md:text-base">{pub.tagline}</span>
                                 <h3 className="text-2xl md:text-4xl font-black my-2 md:my-3 text-[#3D3B3A]">{pub.title}</h3>
                                 <p className="text-gray-600 leading-relaxed text-sm md:text-base">{pub.description}</p>
                             </div>
