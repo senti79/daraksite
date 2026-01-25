@@ -86,6 +86,9 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
+          {/* Desktop Visual Area (Left) */}
+          <HeroImage className="hidden lg:block lg:w-2/5 lg:-mt-10" />
+
           {/* Text Content Area */}
           <div className="w-full lg:w-3/5 text-center lg:text-left z-10">
             <div className="hero-line-static inline-block mb-6 px-4 py-1.5 rounded-full bg-white border border-[#065F46]/30 text-[#065F46] font-bold text-xs tracking-widest shadow-sm">
@@ -123,27 +126,23 @@ const Hero: React.FC = () => {
                 아이들의 문해력과 <br className="md:hidden" />
                 <strong className="font-semibold text-[#065F46]">사고력의 뿌리</strong>를 단단하게 만듭니다.
               </p>
-
-              {/* Scroll Inducer - Encourages 'Click' to unlock Vibration API */}
-              <div
-                onClick={() => document.getElementById('strengths')?.scrollIntoView({ behavior: 'smooth' })}
-                className="mt-12 lg:mt-36 flex flex-col items-center lg:items-start gap-3 cursor-pointer group animate-fade-in-delayed"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="relative w-6 h-10 rounded-full border-2 border-accent-orange/40 flex justify-center p-1.5 transition-colors group-hover:border-accent-orange">
-                    <div className="w-1 h-2 bg-accent-orange rounded-full animate-scroll-mouse"></div>
-                  </div>
-                  <span className="text-xs font-bold text-accent-orange/70 tracking-[0.2em] group-hover:text-accent-orange transition-colors uppercase">
-                    Scroll to Explore
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
+        </div>
 
-          {/* Desktop Visual Area (Right) */}
-          <HeroImage className="hidden lg:block lg:w-2/5 lg:mt-10" />
-
+        {/* Scroll Inducer - Centered for both Desktop and Mobile */}
+        <div
+          onClick={() => document.getElementById('strengths')?.scrollIntoView({ behavior: 'smooth' })}
+          className="mt-12 lg:mt-32 flex flex-col items-center gap-3 cursor-pointer group animate-fade-in-delayed w-full"
+        >
+          <div className="flex items-center gap-4">
+            <div className="relative w-6 h-10 rounded-full border-2 border-accent-orange/40 flex justify-center p-1.5 transition-colors group-hover:border-accent-orange">
+              <div className="w-1 h-2 bg-accent-orange rounded-full animate-scroll-mouse"></div>
+            </div>
+            <span className="text-xs font-bold text-accent-orange/70 tracking-[0.2em] group-hover:text-accent-orange transition-colors uppercase">
+              Scroll to Explore
+            </span>
+          </div>
         </div>
       </div>
       <style>{`
