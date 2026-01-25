@@ -1,5 +1,4 @@
 import React from 'react';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const branchesData = {
     '대전 서구': [
@@ -43,14 +42,7 @@ const Branches: React.FC = () => {
                                 ))}
                             </div>
 
-                            {/* Location Animation - Absolute Positioned at Top Right */}
-                            <div className="absolute top-12 right-4 w-16 h-16 pointer-events-none">
-                                <DotLottieReact
-                                    src="/daraksite/location.json"
-                                    loop
-                                    autoplay
-                                />
-                            </div>
+
 
                             <h3 className="text-2xl font-bold text-[#BE7E56] mb-6 border-b-2 border-[#BE7E56] pb-2">{district}</h3>
                             <ul className="space-y-4">
