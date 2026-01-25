@@ -34,7 +34,7 @@ const App: React.FC = () => {
 
     // Initial check and observation
     const observeElements = () => {
-      const elements = document.querySelectorAll('.text-highlight, .scroll-underline');
+      const elements = document.querySelectorAll('.text-highlight, .scroll-underline, .separator-dot');
       elements.forEach(el => observer.observe(el));
     };
 
