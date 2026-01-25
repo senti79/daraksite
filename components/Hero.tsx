@@ -85,11 +85,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-pattern opacity-10 -z-10"></div>
 
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-
-          {/* Desktop Visual Area (Left) */}
-          <HeroImage className="hidden lg:block lg:w-2/5" />
-
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20">
           {/* Text Content Area */}
           <div className="w-full lg:w-3/5 text-center lg:text-left z-10">
             <div className="hero-line-static inline-block mb-6 px-4 py-1.5 rounded-full bg-white border border-[#065F46]/30 text-[#065F46] font-bold text-xs tracking-widest shadow-sm">
@@ -144,6 +140,9 @@ const Hero: React.FC = () => {
               </div>
             </div>
           </div>
+
+          {/* Desktop Visual Area (Right) */}
+          <HeroImage className="hidden lg:block lg:w-2/5 lg:mt-10" />
 
         </div>
       </div>
