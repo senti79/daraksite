@@ -3,7 +3,7 @@ import React from 'react';
 
 const SectionSeparator: React.FC = () => {
     return (
-        <div className="flex flex-col items-center justify-center py-12 md:py-20 gap-12">
+        <div className="flex flex-col items-center justify-center py-6 md:py-10 gap-20">
             <svg width="15" height="15" viewBox="0 0 100 100" className="separator-dot opacity-30 transition-all duration-700">
                 <path fill="currentColor" d="M50,15 C25,15 15,35 15,50 C15,65 30,85 50,85 C70,85 85,65 85,50 C85,35 75,15 50,15 Z" />
             </svg>
