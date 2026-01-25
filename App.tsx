@@ -45,26 +45,25 @@ const App: React.FC = () => {
 
     const handleFirstInteraction = () => {
       if (typeof window !== "undefined" && window.navigator && window.navigator.vibrate) {
-        window.navigator.vibrate(10); // 아주 짧은 진동으로 권한 획득 및 인지 유도
+        // 진동 API는 사용자의 명확한 '클릭/터치' 액션이 있어야 활성화됩니다.
+        // 스크롤은 유효한 액션으로 인정되지 않는 경우가 많으므로 제외합니다.
+        window.navigator.vibrate(10);
       }
       window.removeEventListener('touchstart', handleFirstInteraction);
       window.removeEventListener('mousedown', handleFirstInteraction);
-      window.removeEventListener('scroll', handleFirstInteraction);
-      window.removeEventListener('wheel', handleFirstInteraction);
+      window.removeEventListener('click', handleFirstInteraction);
     };
 
     window.addEventListener('touchstart', handleFirstInteraction);
     window.addEventListener('mousedown', handleFirstInteraction);
-    window.addEventListener('scroll', handleFirstInteraction);
-    window.addEventListener('wheel', handleFirstInteraction);
+    window.addEventListener('click', handleFirstInteraction);
 
     return () => {
       observer.disconnect();
       clearTimeout(timeoutId);
       window.removeEventListener('touchstart', handleFirstInteraction);
       window.removeEventListener('mousedown', handleFirstInteraction);
-      window.removeEventListener('scroll', handleFirstInteraction);
-      window.removeEventListener('wheel', handleFirstInteraction);
+      window.removeEventListener('click', handleFirstInteraction);
     };
   }, []);
 
