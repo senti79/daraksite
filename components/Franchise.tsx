@@ -60,8 +60,8 @@ const Franchise: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">가맹 문의</span></h2>
 
-          <div className="mt-6 mb-4 hidden lg:flex justify-center">
-            <img src="/daraksite/darak.png" alt="책읽는 다락서원 로고" className="h-16 md:h-20 w-auto opacity-90" />
+          <div className="mt-12 mb-6 hidden lg:flex justify-center">
+            <img src="/daraksite/darak.png" alt="책읽는 다락서원 로고" className="h-24 md:h-32 w-auto opacity-95" />
           </div>
 
           <p className="mt-4 text-lg text-gray-600 ">
