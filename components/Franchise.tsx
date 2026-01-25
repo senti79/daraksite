@@ -61,7 +61,7 @@ const Franchise: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">가맹 문의</span></h2>
           <p className="mt-4 text-lg text-gray-600 ">
             책읽는 다락서원과 함께 <br className="md:hidden" />
-            아이들의 미래를 열어갈 원장님을 모십니다.
+            아이들의 미래를 열어갈 <br className="md:hidden" /> 원장님을 모십니다.
           </p>
 
           <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
