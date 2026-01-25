@@ -73,6 +73,10 @@ const App: React.FC = () => {
       // 로컬 개발 환경에서는 실행하지 않음
       if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') return;
 
+      // 모바일 기기인지 확인 (User Agent 기반)
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (!isMobile) return;
+
       try {
         // 서버에서 최신 index.html을 캐시 없이 가져옴
         const response = await fetch(window.location.href, {

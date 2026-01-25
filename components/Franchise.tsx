@@ -81,7 +81,7 @@ const Franchise: React.FC = () => {
           </div>
         </div>
         <div className="grid lg:grid-cols-2 gap-12">
-          <div className="sketch-card bg-white p-8 pt-24 relative overflow-hidden flex flex-col">
+          <div className="sketch-card bg-white p-5 md:p-8 pt-20 md:pt-24 relative overflow-hidden flex flex-col">
             {/* Decorative Top Bar */}
             <div className="absolute top-0 left-0 w-full h-10 bg-[#BE7E56]/25 flex justify-center items-center gap-4 border-b border-[#BE7E56]/20">
               {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -90,11 +90,11 @@ const Franchise: React.FC = () => {
             </div>
 
             <h3 className="text-2xl font-bold text-[#BE7E56] mb-8 text-center uppercase tracking-wider">개원 자격</h3>
-            <div className="flex flex-wrap justify-start gap-4 md:gap-6">
+            <div className="flex flex-col md:flex-row md:flex-wrap justify-start gap-3 md:gap-6">
               {qualifications.map((q, i) => (
-                <div key={i} className="flex items-center bg-[#F8F5F2] px-5 py-3 rounded-xl border border-[#BE7E56]/10 shadow-sm transition-transform hover:scale-105">
+                <div key={i} className="flex items-center bg-[#F8F5F2] px-4 md:px-5 py-3 rounded-xl border border-[#BE7E56]/10 shadow-sm transition-transform hover:scale-105 w-full md:w-auto">
                   <span className="text-[#BE7E56] font-bold mr-3 text-xl">✓</span>
-                  <span className="font-semibold text-[#3D3B3A]">{q}</span>
+                  <span className="font-semibold text-[#3D3B3A] text-sm md:text-base">{q}</span>
                 </div>
               ))}
             </div>
