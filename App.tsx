@@ -67,6 +67,56 @@ const App: React.FC = () => {
     };
   }, []);
 
+  // 강력한 자동 업데이트 로직 (버전 체크)
+  useEffect(() => {
+    const checkForUpdates = async () => {
+      // 로컬 개발 환경에서는 실행하지 않음
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') return;
+
+      try {
+        // 서버에서 최신 index.html을 캐시 없이 가져옴
+        const response = await fetch(window.location.href, {
+          cache: 'no-store',
+          headers: {
+            'Cache-Control': 'no-cache',
+            'Pragma': 'no-cache'
+          }
+        });
+        const html = await response.text();
+
+        // Vite 빌드 결과물 중 index-*.js 파일의 해시값을 추출
+        const match = html.match(/src="\/daraksite\/assets\/index-([a-zA-Z0-9]+)\.js"/);
+        if (match && match[1]) {
+          const newHash = match[1];
+          const oldHash = localStorage.getItem('app-version-hash');
+
+          if (oldHash && oldHash !== newHash) {
+            // 버전이 다르면 로컬 스토리지를 갱신하고 페이지를 강제 새로고침
+            localStorage.setItem('app-version-hash', newHash);
+            window.location.reload();
+          } else if (!oldHash) {
+            localStorage.setItem('app-version-hash', newHash);
+          }
+        }
+      } catch (error) {
+        console.error('업데이트 확인 중 오류 발생:', error);
+      }
+    };
+
+    // 1. 앱 로드 시 확인
+    checkForUpdates();
+
+    // 2. 사용자가 탭을 다시 활성화할 때(다른 앱 보다가 돌아올 때 등) 확인
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        checkForUpdates();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, []);
+
   return (
     <div className="bg-[#F8F5F2] min-h-screen">
       <div className="max-w-5xl mx-auto">
