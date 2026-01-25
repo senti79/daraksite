@@ -124,8 +124,8 @@ const Hero: React.FC = () => {
                 글자만 읽는 것이 아니라 <br className="md:hidden" />
                 <strong className="font-semibold text-[#3D3B3A]">마음으로 이해</strong>하는 독서.<br />
                 <br className="md:hidden" />
-                아이들의 문해력과 사고력의 뿌리를 <br className="md:hidden" />
-                단단하게 만듭니다.
+                아이들의 문해력과 <br className="md:hidden" />
+                <strong className="font-semibold text-[#3D3B3A]">사고력의 뿌리</strong>를 단단하게 만듭니다.
               </p>
             </div>
           </div>
