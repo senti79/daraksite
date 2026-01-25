@@ -15,6 +15,7 @@ const Footer: React.FC = () => {
             <h4 className="font-bold text-base text-[#3D3B3A] mb-2">상담 및 가맹 문의</h4>
             <p>Tel: 010-3482-2016 / 010-8428-2478</p>
             <p>사업자 번호: 360-91-00671</p>
+            <p>가맹사업등록번호 20250262</p>
           </div>
         </div>
         <div className="text-center text-xs text-gray-400 pt-6 border-t border-gray-300">
