@@ -30,6 +30,7 @@ const Branches: React.FC = () => {
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">가까운 다락서원 찾기</span></h2>
                     <p className="mt-4 text-lg text-gray-600 ">우리 동네 독서 전문 교육원</p>
+                    <br className="md:hidden" />
                     <p className="mt-1 text-sm text-gray-400 md:hidden font-medium">연락처를 클릭하면 바로 연결됩니다.</p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
