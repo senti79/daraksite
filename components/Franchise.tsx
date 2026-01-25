@@ -55,12 +55,12 @@ const Franchise: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="franchise" className="py-20 md:py-32 bg-white">
+    <section id="franchise" className="py-20 lg:pt-48 lg:pb-32 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">가맹 문의</span></h2>
 
-          <div className="mt-12 mb-6 hidden lg:flex justify-center">
+          <div className="mt-20 mb-8 hidden lg:flex justify-center">
             <img src="/daraksite/darak.png" alt="책읽는 다락서원 로고" className="h-24 md:h-32 w-auto opacity-95" />
           </div>
 
