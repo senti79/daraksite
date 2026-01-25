@@ -42,7 +42,7 @@ const Process: React.FC = () => {
 
                 <h3 className="text-xl font-bold text-[#3D3B3A] mb-3 relative inline-block">
                   {step.title}
-                  <div className="scroll-underline absolute -bottom-1 left-0 h-1.5 bg-[#BE7E56] rounded-full transform -rotate-0.5 transition-all duration-700"></div>
+                  <div className="scroll-underline absolute -bottom-1 left-0 h-1.5 bg-[#D35400] rounded-full transform -rotate-0.5 transition-all duration-700"></div>
                 </h3>
                 <p className="text-gray-600 leading-relaxed">{step.description}</p>
               </div>

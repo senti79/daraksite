@@ -30,7 +30,7 @@ const Header: React.FC = () => {
             <img src="/daraksite/darak.png" alt="다락서원 로고" className="w-full h-full object-contain" />
           </div>
 
-          <span className="font-black text-xl md:text-2xl text-[#3D3B3A] tracking-tighter transition-colors group-hover:text-[#BE7E56]">
+          <span className="font-black text-xl md:text-2xl text-[#3D3B3A] tracking-tighter transition-colors group-hover:text-[#D35400]">
             책읽는 다락서원
           </span>
         </a>
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
               key={link.href}
               href={link.href}
               onClick={(e) => handleLinkClick(e, link.href)}
-              className="text-gray-600 hover:text-[#BE7E56] transition-colors duration-300 font-bold text-sm tracking-tight"
+              className="text-gray-600 hover:text-[#D35400] transition-colors duration-300 font-bold text-sm tracking-tight"
             >
               {link.label}
             </a>
@@ -62,7 +62,7 @@ const Header: React.FC = () => {
       <div className={`md:hidden fixed top-0 left-0 w-full h-screen bg-white z-50 transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0 opacity-100 pointer-events-auto' : '-translate-x-full opacity-0 pointer-events-none'}`}>
         <div className="flex flex-col items-center justify-center h-full space-y-8">
           {navLinks.map(link => (
-            <a key={link.href} href={link.href} onClick={(e) => handleLinkClick(e, link.href)} className="text-2xl font-bold text-gray-800 hover:text-[#BE7E56] transition-colors duration-300">{link.label}</a>
+            <a key={link.href} href={link.href} onClick={(e) => handleLinkClick(e, link.href)} className="text-2xl font-bold text-gray-800 hover:text-[#D35400] transition-colors duration-300">{link.label}</a>
           ))}
         </div>
       </div>

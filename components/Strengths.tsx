@@ -100,7 +100,7 @@ const Strengths: React.FC = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-2xl md:text-2xl font-bold mb-4 text-[#BE7E56]">{item.title}</h3>
+                  <h3 className="text-2xl md:text-2xl font-bold mb-4 text-[#D35400]">{item.title}</h3>
                   <p className="text-base md:text-base text-gray-600 leading-relaxed flex-grow">{item.description}</p>
                 </div>
               </SwiperSlide>
@@ -109,7 +109,7 @@ const Strengths: React.FC = () => {
 
           <style>{`
             .swiper-button-next, .swiper-button-prev {
-              color: #BE7E56 !important;
+              color: #D35400 !important;
               opacity: 0.15 !important;
               transition: all 0.3s;
               display: none !important;
@@ -133,7 +133,7 @@ const Strengths: React.FC = () => {
               right: 0px !important;
             }
             .swiper-pagination-bullet-active {
-              background: #BE7E56 !important;
+              background: #D35400 !important;
             }
             .swiper-slide {
               height: auto !important;

@@ -64,8 +64,8 @@ const Hero: React.FC = () => {
   // Shared Image Component to avoid repetition logic issues
   const HeroImage = ({ className = "" }: { className?: string }) => (
     <div className={`hero-visual-area relative ${className}`}>
-      <div className="floating-blob absolute -top-10 -left-10 w-40 h-40 bg-[#BE7E56]/10 rounded-full blur-3xl -z-10"></div>
-      <div className="floating-blob absolute -bottom-10 -right-10 w-32 h-32 bg-[#BE7E56]/5 rounded-full blur-2xl -z-10"></div>
+      <div className="floating-blob absolute -top-10 -left-10 w-40 h-40 bg-[#D35400]/10 rounded-full blur-3xl -z-10"></div>
+      <div className="floating-blob absolute -bottom-10 -right-10 w-32 h-32 bg-[#D35400]/5 rounded-full blur-2xl -z-10"></div>
 
       <div className="relative group">
         <div className="relative overflow-hidden rounded-[2.5rem] shadow-xl bg-white">
@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
 
           {/* Text Content Area */}
           <div className="w-full lg:w-3/5 text-center lg:text-left z-10">
-            <div className="hero-line-static inline-block mb-6 px-4 py-1.5 rounded-full bg-white border border-[#BE7E56]/30 text-[#BE7E56] font-bold text-xs tracking-widest shadow-sm">
+            <div className="hero-line-static inline-block mb-6 px-4 py-1.5 rounded-full bg-white border border-[#D35400]/30 text-[#D35400] font-bold text-xs tracking-widest shadow-sm">
               PREMIUM READING ACADEMY
             </div>
 
@@ -105,13 +105,13 @@ const Hero: React.FC = () => {
               </span>
 
               {/* Brand name with typing animation */}
-              <span className="block text-4xl md:text-5xl lg:text-6xl font-black text-[#BE7E56] mt-8 flex items-center justify-center lg:justify-start">
+              <span className="block text-4xl md:text-5xl lg:text-6xl font-black text-[#D35400] mt-8 flex items-center justify-center lg:justify-start">
                 {brandText.split("").map((char, i) => (
                   <span key={i} className="typing-letter" style={{ whiteSpace: char === " " ? "pre" : "normal" }}>
                     {char}
                   </span>
                 ))}
-                <span className="typing-cursor ml-1 inline-block w-1.5 h-10 md:h-12 lg:h-14 bg-[#BE7E56]"></span>
+                <span className="typing-cursor ml-1 inline-block w-1.5 h-10 md:h-12 lg:h-14 bg-[#D35400]"></span>
               </span>
             </h1>
 
@@ -122,10 +122,10 @@ const Hero: React.FC = () => {
             <div className="hero-desc max-w-xl mx-auto lg:mx-0">
               <p className="text-lg md:text-xl text-gray-600  leading-relaxed">
                 글자만 읽는 것이 아니라 <br className="md:hidden" />
-                <strong className="font-semibold text-[#3D3B3A]">마음으로 이해</strong>하는 독서.<br />
+                <strong className="font-semibold text-[#2D5A27]">마음으로 이해</strong>하는 독서.<br />
                 <br className="md:hidden" />
                 아이들의 문해력과 <br className="md:hidden" />
-                <strong className="font-semibold text-[#3D3B3A]">사고력의 뿌리</strong>를 단단하게 만듭니다.
+                <strong className="font-semibold text-[#2D5A27]">사고력의 뿌리</strong>를 단단하게 만듭니다.
               </p>
 
               {/* Scroll Inducer - Encourages 'Click' to unlock Vibration API */}

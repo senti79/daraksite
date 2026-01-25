@@ -63,7 +63,7 @@ const Publications: React.FC = () => {
                     {publications.map((pub, index) => (
                         <div key={index} className="grid md:grid-cols-5 gap-10 md:gap-12 items-center">
                             <div className={`md:col-span-2 w-full ${index % 2 !== 0 ? 'md:order-2' : 'md:order-1'}`}>
-                                <div className="rounded-2xl shadow-xl border-2 md:border-4 border-[#BE7E56]/10 overflow-hidden relative bg-white"
+                                <div className="rounded-2xl shadow-xl border-2 md:border-4 border-[#D35400]/10 overflow-hidden relative bg-white"
                                     style={{ touchAction: 'pan-y' }}>
                                     <div className="relative w-full pb-[133.33%]">
                                         <div className="absolute inset-0">
@@ -108,11 +108,11 @@ const Publications: React.FC = () => {
             <style>{`
                 #publications .swiper-button-next, 
                 #publications .swiper-button-prev {
-                    color: #BE7E56 !important;
+                    color: #D35400 !important;
                     transform: scale(0.6);
                 }
                 #publications .swiper-pagination-bullet-active {
-                    background: #BE7E56 !important;
+                    background: #D35400 !important;
                 }
                 .swiper {
                     touch-action: pan-y !important;

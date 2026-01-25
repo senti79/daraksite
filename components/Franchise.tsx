@@ -90,7 +90,7 @@ const Franchise: React.FC = () => {
             </div>
 
             <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-              <h3 className="text-2xl font-bold text-[#BE7E56] uppercase tracking-wider">개원 자격</h3>
+              <h3 className="text-2xl font-bold text-[#D35400] uppercase tracking-wider">개원 자격</h3>
               <div className="w-20 h-20 md:w-24 md:h-24">
                 <DotLottieReact
                   src="/daraksite/human-resources.json"
@@ -102,7 +102,7 @@ const Franchise: React.FC = () => {
             <div className="flex flex-col md:flex-row md:flex-wrap justify-start gap-3 md:gap-6">
               {qualifications.map((q, i) => (
                 <div key={i} className="flex items-center bg-white px-4 md:px-5 py-3 rounded-xl border border-gray-200 shadow-sm transition-transform hover:scale-105 w-full md:w-auto">
-                  <span className="text-[#BE7E56] font-bold mr-3 text-xl">✓</span>
+                  <span className="text-[#D35400] font-bold mr-3 text-xl">✓</span>
                   <span className="font-semibold text-[#3D3B3A] text-sm md:text-base">{q}</span>
                 </div>
               ))}
@@ -117,7 +117,7 @@ const Franchise: React.FC = () => {
             </div>
 
             <div className="p-6 pt-24 border-b border-gray-300 flex flex-col md:flex-row justify-between items-center gap-4">
-              <h3 className="text-2xl font-bold text-[#BE7E56] uppercase tracking-wider">자주 묻는 질문</h3>
+              <h3 className="text-2xl font-bold text-[#D35400] uppercase tracking-wider">자주 묻는 질문</h3>
               <div className="w-20 h-20 md:w-24 md:h-24">
                 <DotLottieReact
                   src="/daraksite/q-and-a.json"
