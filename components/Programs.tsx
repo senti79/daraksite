@@ -118,7 +118,7 @@ const Programs: React.FC = () => {
         <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px]">
           {programData[activeTab].map((program, index) => (
             <div key={`${activeTab}-${index}`} className={`program-card p-8 rounded-2xl bg-white border-l-4 ${program.color} flex flex-col shadow-sm hover:shadow-md transition-shadow`}>
-              <h3 className="text-xl font-bold text-[#3D3B3A] mb-2">{program.name}</h3>
+              <h3 className="text-xl font-bold text-[#065F46] mb-2">{program.name}</h3>
               <p className="text-gray-700 flex-grow">{program.description}</p>
             </div>
           ))}
