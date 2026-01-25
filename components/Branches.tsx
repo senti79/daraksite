@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const branchesData = {
     '대전 서구': [
@@ -42,7 +42,17 @@ const Branches: React.FC = () => {
                                     <div key={i} className="w-2.5 h-2.5 rounded-full bg-white border border-[#BE7E56]/30 shadow-inner"></div>
                                 ))}
                             </div>
-                            <h3 className="text-2xl font-bold text-[#BE7E56] mb-6 border-b-2 border-[#BE7E56] pb-2">{district}</h3>
+
+                            <div className="flex flex-row justify-between items-center mb-6 gap-2">
+                                <h3 className="text-2xl font-bold text-[#BE7E56] border-b-2 border-[#BE7E56] pb-2 flex-grow">{district}</h3>
+                                <div className="w-16 h-16 shrink-0">
+                                    <DotLottieReact
+                                        src="/daraksite/location.json"
+                                        loop
+                                        autoplay
+                                    />
+                                </div>
+                            </div>
                             <ul className="space-y-4">
                                 {branches.map(branch => (
                                     <li key={branch.name} className="flex justify-between items-center">
