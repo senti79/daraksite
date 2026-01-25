@@ -127,11 +127,42 @@ const Hero: React.FC = () => {
                 아이들의 문해력과 <br className="md:hidden" />
                 <strong className="font-semibold text-[#3D3B3A]">사고력의 뿌리</strong>를 단단하게 만듭니다.
               </p>
+
+              {/* Scroll Inducer - Encourages 'Click' to unlock Vibration API */}
+              <div
+                onClick={() => document.getElementById('strengths')?.scrollIntoView({ behavior: 'smooth' })}
+                className="mt-12 lg:mt-20 flex flex-col items-center lg:items-start gap-3 cursor-pointer group animate-fade-in-delayed"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="relative w-6 h-10 rounded-full border-2 border-[#BE7E56]/40 flex justify-center p-1.5 transition-colors group-hover:border-[#BE7E56]">
+                    <div className="w-1 h-2 bg-[#BE7E56] rounded-full animate-scroll-mouse"></div>
+                  </div>
+                  <span className="text-xs font-bold text-[#BE7E56]/70 tracking-[0.2em] group-hover:text-[#BE7E56] transition-colors uppercase">
+                    Scroll to Explore
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 
         </div>
       </div>
+      <style>{`
+        @keyframes scroll-mouse {
+          0% { transform: translateY(0); opacity: 1; }
+          100% { transform: translateY(15px); opacity: 0; }
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-scroll-mouse {
+          animation: scroll-mouse 1.8s infinite ease-in-out;
+        }
+        .animate-fade-in-delayed {
+          animation: fadeIn 1s ease-out 2.8s both;
+        }
+      `}</style>
     </section>
   );
 };
