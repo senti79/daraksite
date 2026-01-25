@@ -116,7 +116,16 @@ const Franchise: React.FC = () => {
               ))}
             </div>
 
-            <h3 className="text-2xl font-bold text-[#BE7E56] p-6 pt-24 border-b border-gray-300 text-center uppercase tracking-wider">자주 묻는 질문</h3>
+            <div className="p-6 pt-24 border-b border-gray-300 flex flex-col md:flex-row justify-between items-center gap-4">
+              <h3 className="text-2xl font-bold text-[#BE7E56] uppercase tracking-wider">자주 묻는 질문</h3>
+              <div className="w-20 h-20 md:w-24 md:h-24">
+                <DotLottieReact
+                  src="/daraksite/q-and-a.json"
+                  loop
+                  autoplay
+                />
+              </div>
+            </div>
             <div className="pb-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
