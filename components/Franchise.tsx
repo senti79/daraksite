@@ -63,6 +63,9 @@ const Franchise: React.FC = () => {
             책읽는 다락서원과 함께 <br className="md:hidden" />
             아이들의 미래를 열어갈 <br className="md:hidden" /> 원장님을 모십니다.
           </p>
+          <div className="mt-6 flex justify-center">
+            <img src="/daraksite/darak.png" alt="책읽는 다락서원 로고" className="h-16 md:h-20 w-auto opacity-90" />
+          </div>
 
           <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
             <a href="tel:010-3482-2016" className="group flex items-center gap-3 bg-white border-2 border-[#065F46] px-6 py-3 rounded-full hover:bg-[#065F46] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">

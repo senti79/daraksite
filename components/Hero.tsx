@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
 
           {/* Text Content Area */}
           <div className="w-full lg:w-3/5 text-center lg:text-left z-10">
-            <div className="hero-line-static inline-block mb-6 px-4 py-1.5 rounded-full bg-white border border-[#D35400]/30 text-[#D35400] font-bold text-xs tracking-widest shadow-sm">
+            <div className="hero-line-static inline-block mb-6 px-4 py-1.5 rounded-full bg-white border border-[#065F46]/30 text-[#065F46] font-bold text-xs tracking-widest shadow-sm">
               PREMIUM READING ACADEMY
             </div>
 
