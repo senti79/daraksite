@@ -77,8 +77,8 @@ const Programs: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">단계별 교육 프로그램</span></h2>
           <p className="mt-4 text-lg text-gray-600 ">
-            "현장의 경험으로 매년 더 좋은 책을 <br className="md:hidden" />
-            발굴하고 문항을 만듭니다."
+            20여년의 독서교육 경험으로 좋은 책을 <br className="md:hidden" />
+            지속적으로 발굴하여 교재로 만듭니다.
           </p>
           <div className="mt-8 flex justify-center">
             <div className="w-full max-w-md overflow-hidden rounded-2xl shadow-lg">
