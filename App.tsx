@@ -139,7 +139,6 @@ const App: React.FC = () => {
           <Branches />
           <SectionSeparator />
           <Franchise />
-          <SectionSeparator />
         </main>
         <Footer />
       </div>
