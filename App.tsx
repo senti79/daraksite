@@ -134,9 +134,9 @@ const App: React.FC = () => {
           <SectionSeparator />
           <Programs />
           <SectionSeparator />
-          <Branches />
-          <SectionSeparator />
           <Publications />
+          <SectionSeparator />
+          <Branches />
           <SectionSeparator />
           <Franchise />
         </main>
