@@ -25,7 +25,7 @@ const publications = [
                 </span>
             </>
         ),
-        images: ['poem_0.png', 'poem_1.png', 'poem_3.png', 'poem_4.png', 'poem_5.png', 'poem_6.png', 'poem_7.png']
+        images: ['poem_0.png', 'poem_1.png', 'poem_3.png', 'poem_4.png', 'poem_5.png', 'poem_6.png', 'poem_7.png', 'poem_8.png']
     },
     {
         title: '다락서원 독후감',
