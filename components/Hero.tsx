@@ -11,17 +11,17 @@ const Hero: React.FC = () => {
       // Main text entrance for static lines
       gsap.fromTo(".hero-line-static",
         { x: 40, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.8, ease: "power3.out", stagger: 0.2 }
+        { x: 0, opacity: 1, duration: 1.2, ease: "power3.out", stagger: 0.4 }
       );
 
       // Typing animation for the brand name
-      const tl = gsap.timeline({ delay: 0.8 });
+      const tl = gsap.timeline({ delay: 1.6 });
       tl.fromTo(".typing-letter",
         { display: "none" },
         {
           display: "inline-block",
           stagger: {
-            each: 0.1
+            each: 0.15
           },
           ease: "none"
         }
@@ -39,13 +39,13 @@ const Hero: React.FC = () => {
       // Visual area entrance (Targeting all visual blocks)
       gsap.fromTo(".hero-visual-area",
         { opacity: 0, scale: 0.95, y: 30 },
-        { opacity: 1, scale: 1, y: 0, duration: 1.2, ease: "power2.out", delay: 1.2 }
+        { opacity: 1, scale: 1, y: 0, duration: 1.8, ease: "power2.out", delay: 2.5 }
       );
 
       // Subtitle reveal
       gsap.fromTo(".hero-desc",
         { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", delay: 2.2 }
+        { y: 0, opacity: 1, duration: 1.2, ease: "power3.out", delay: 3.8 }
       );
 
       // Floating decoration
@@ -153,7 +153,7 @@ const Hero: React.FC = () => {
           animation: scroll-mouse 1.8s infinite ease-in-out;
         }
         .animate-fade-in-delayed {
-          animation: fadeIn 1s ease-out 2.8s both;
+          animation: fadeIn 1.2s ease-out 4.8s both;
         }
       `}</style>
     </section>
