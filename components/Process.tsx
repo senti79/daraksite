@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const processSteps = [
-  { title: '문해력 테스트', description: '입회 시 개인별 독서 능력을 정밀하게 진단합니다.' },
+  { title: '문해력 테스트', description: '입회 후 문해력 및 독서능력을 책읽는 다락서원에서 자체 개발한 서술형 평가 시스템으로 정밀하게 진단합니다.' },
   { title: '책 한 권 통째로 읽기', description: '선생님의 지도 아래 작품 전체를 깊이 있게 정독합니다.' },
   { title: '내용 이해와 서답형 글쓰기', description: '책의 핵심 내용을 파악하고 질문에 답하며 이해를 확인합니다.' },
   { title: '주제별 서술형 글쓰기', description: '자신의 생각을 논리적으로 풀어내는 심화 글쓰기를 진행합니다.' },
