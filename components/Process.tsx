@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import SectionSeparator from './SectionSeparator';
 
 const processSteps = [
-  { title: '독서 & 문해력 테스트', description: '입회 시 개인별 독서 능력을 정밀하게 진단합니다.' },
+  { title: '문해력 테스트', description: '입회 시 개인별 독서 능력을 정밀하게 진단합니다.' },
   { title: '책 한 권 통째로 읽기', description: '선생님의 지도 아래 작품 전체를 깊이 있게 정독합니다.' },
   { title: '내용 이해와 서답형 글쓰기', description: '책의 핵심 내용을 파악하고 질문에 답하며 이해를 확인합니다.' },
   { title: '주제별 서술형 글쓰기', description: '자신의 생각을 논리적으로 풀어내는 심화 글쓰기를 진행합니다.' },
@@ -14,7 +14,7 @@ const Process: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">체계적인 학습 과정</span></h2>
-          <p className="mt-4 text-lg text-gray-600 ">생각의 근육을 키우는 4단계 프로세스</p>
+          <p className="mt-4 text-lg text-gray-600 ">책읽는 다락서원 4단계 시스템</p>
           <div className="mt-10 flex justify-center">
             <div className="w-full max-w-lg overflow-hidden rounded-3xl shadow-2xl">
               <img
@@ -57,9 +57,9 @@ const Process: React.FC = () => {
             <span className="text-highlight">문해력 테스트</span>
           </h3>
           <p className="mt-4 text-lg text-gray-600 ">
-            다락서원에서 개발한 <br className="md:hidden" />
-            <span className="font-bold text-[#3D3B3A]">국내 최초 100% 서술형 테스트</span>로 <br />
-            문해력을 정확히 진단해드립니다.
+            책읽는 다락서원에서 개발한 <br className="md:hidden" />
+            <span className="font-bold text-[#3D3B3A]">국내 최초 100% 서술형 답안</span>으로 <br />
+            문해력을 정확히 진단합니다.
           </p>
         </div>
 

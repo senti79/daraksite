@@ -12,10 +12,10 @@ const qualifications = [
 
 const faqs = [
   { q: '개원 시 필요한 공간은 어느 정도인가요?', a: '교육청 인가가 가능한 교습소 또는 학원 공간이면 충분합니다. 지역적 특성을 고려해 본부와 긴밀한 협의 후 결정합니다.' },
-  { q: '선생님 교육은 어떻게 이루어지나요?', a: '책읽는 다락서원의 선생님이 되기 위해선, 기본적으로 50시간의 체계적인 교육 및 실습 과정을 이수해야 합니다.' },
-  { q: '초기 개원 비용은 어느 정도인가요?', a: '필독서 1,000여 권 구입 비용, 가맹비 330만 원, 교육비 55만 원이 발생합니다. 합리적인 비용으로 시작할 수 있습니다.' },
-  { q: '회비 및 교재비는 어떻게 되나요?', a: '월 회비는 지역 교육청 기준에 맞춰 15~20만원 사이에서 자율 결정합니다. 다락서원은 아이들에게 별도의 교재비를 받지 않아 학부모 부담을 덜었습니다.' },
-  { q: '다락서원 운영의 가장 큰 장점은 무엇인가요?', a: '정해진 시간에만 수업하는 시스템으로 보강 부담이 없으며, 본사 직영점 운영 노하우를 실시간으로 공유받을 수 있습니다. 교재비 외 추가 비용이 없어 안정적인 수입이 가능합니다.' },
+  { q: '선생님 교육은 어떻게 이루어지나요?', a: '책읽는 다락서원의 선생님이 되기 위해서는 본사에서 정한 일정 시간의 교육 및 실습 과정을 이수해야 합니다.' },
+  { q: '초기 개원 비용은 어느 정도인가요?', a: '필독서 1,000여 권 구입 비용, 가맹비 330만 원, 교육비 55만 원이 발생합니다. 합리적인 비용으로 시작할 수 있습니다. (인테리어비 강제 규정 없음)' },
+  { q: '가맹비 외 분원이 본사에 지급해야 할 비용 있나요?', a: '원비의 8.5%가량이 교재비입니다. 이외의 다른 비용이 없습니다.' },
+  { q: '다락서원 운영의 가장 큰 장점은 무엇인가요?', a: '정해진 시간에만 수업하는 시스템으로 보강 부담이 없으며, 본사 직영점 운영 노하우를 실시간으로 공유받을 수 있습니다. 본사가 직영원을 운영하면서 교재를 지속적으로 업데이트합니다.' },
 ];
 
 const AccordionItem: React.FC<{ q: string; a: string; isOpen: boolean; onClick: () => void }> = ({ q, a, isOpen, onClick }) => {
@@ -70,18 +70,18 @@ const Franchise: React.FC = () => {
           </p>
 
           <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-            <a href="tel:010-3482-2016" className="group flex items-center gap-2.5 bg-white border-2 border-[#065F46] px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:bg-[#065F46] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
-              <span className="flex items-center justify-center w-7 h-7 md:w-8 md:h-8 rounded-full bg-[#D35400]/10 group-hover:bg-white/20 animate-jelly-bounce">
-                <svg className="w-4 h-4 md:w-5 md:h-5 text-[#D35400] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" /></svg>
-              </span>
-              <span className="text-base md:text-lg font-bold">010-3482-2016</span>
-            </a>
-
             <a href="tel:010-8428-2478" className="group flex items-center gap-2.5 bg-white border-2 border-[#065F46] px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:bg-[#065F46] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
               <span className="flex items-center justify-center w-7 h-7 md:w-8 md:h-8 rounded-full bg-[#D35400]/10 group-hover:bg-white/20 animate-jelly-bounce">
                 <svg className="w-4 h-4 md:w-5 md:h-5 text-[#D35400] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" /></svg>
               </span>
               <span className="text-base md:text-lg font-bold">010-8428-2478</span>
+            </a>
+
+            <a href="tel:010-3482-2016" className="group flex items-center gap-2.5 bg-white border-2 border-[#065F46] px-5 py-2.5 md:px-6 md:py-3 rounded-full hover:bg-[#065F46] hover:text-white transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
+              <span className="flex items-center justify-center w-7 h-7 md:w-8 md:h-8 rounded-full bg-[#D35400]/10 group-hover:bg-white/20 animate-jelly-bounce">
+                <svg className="w-4 h-4 md:w-5 md:h-5 text-[#D35400] group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" /></svg>
+              </span>
+              <span className="text-base md:text-lg font-bold">010-3482-2016</span>
             </a>
           </div>
         </div>

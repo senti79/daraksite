@@ -117,11 +117,9 @@ const Hero: React.FC = () => {
             {/* Description Text */}
             <div className="hero-desc max-w-xl mx-auto lg:mx-0">
               <p className="text-lg md:text-xl text-gray-600  leading-relaxed">
-                글자만 읽는 것이 아니라 <br className="md:hidden" />
-                <strong className="font-semibold text-[#065F46]">마음으로 이해</strong>하는 독서.<br />
-                <br className="md:hidden" />
-                아이들의 문해력과 <br className="md:hidden" />
-                <strong className="font-semibold text-[#065F46]">사고력의 뿌리</strong>를 단단하게 만듭니다.
+                AI 시대 <br />
+                인문학적 인재를 길러내는 <br />
+                책읽는 다락서원 독서 시스템
               </p>
             </div>
           </div>
