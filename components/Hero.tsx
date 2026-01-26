@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
       <div className="relative group">
         <div className="relative overflow-hidden rounded-[2.5rem] shadow-xl bg-white">
           <img
-            src="/daraksite/read.gif"
+            src="/read.gif"
             alt="책 읽는 모습"
             className="w-full h-full object-contain aspect-square transform scale-100 group-hover:scale-105 transition-transform duration-1000"
           />

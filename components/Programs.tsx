@@ -83,7 +83,7 @@ const Programs: React.FC = () => {
           <div className="mt-8 flex justify-center">
             <div className="w-full max-w-md overflow-hidden rounded-2xl shadow-lg">
               <img
-                src="/daraksite/study.gif"
+                src="/study.gif"
                 alt="학습 모습 애니메이션"
                 className="w-full h-auto object-cover"
               />

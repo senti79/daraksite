@@ -27,7 +27,7 @@ const Header: React.FC = () => {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }} className="flex items-center gap-4 group">
           <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 overflow-hidden rounded-lg">
-            <img src="/daraksite/darak.png" alt="다락서원 로고" className="w-full h-full object-contain" />
+            <img src="/darak.png" alt="다락서원 로고" className="w-full h-full object-contain" />
           </div>
 
           <span className="font-black text-xl md:text-2xl text-[#3D3B3A] tracking-tighter transition-colors group-hover:text-[#D35400]">

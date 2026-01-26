@@ -61,7 +61,7 @@ const Franchise: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]"><span className="text-highlight">가맹 문의</span></h2>
 
           <div className="mt-8 lg:mt-20 mb-6 lg:mb-8 flex justify-center">
-            <img src="/daraksite/darak.png" alt="책읽는 다락서원 로고" className="h-16 lg:h-32 w-auto opacity-95" />
+            <img src="/darak.png" alt="책읽는 다락서원 로고" className="h-16 lg:h-32 w-auto opacity-95" />
           </div>
 
           <p className="mt-4 text-lg text-gray-600 ">
@@ -98,7 +98,7 @@ const Franchise: React.FC = () => {
               <h3 className="text-2xl font-bold text-[#D35400] uppercase tracking-wider">개원 자격</h3>
               <div className="w-20 h-20 md:w-24 md:h-24">
                 <DotLottieReact
-                  src="/daraksite/human-resources.json"
+                  src="/human-resources.json"
                   loop
                   autoplay
                 />
@@ -125,7 +125,7 @@ const Franchise: React.FC = () => {
               <h3 className="text-2xl font-bold text-[#D35400] uppercase tracking-wider">자주 묻는 질문</h3>
               <div className="w-20 h-20 md:w-24 md:h-24">
                 <DotLottieReact
-                  src="/daraksite/q-and-a.json"
+                  src="/q-and-a.json"
                   loop
                   autoplay
                 />

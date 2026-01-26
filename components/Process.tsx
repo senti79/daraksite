@@ -25,7 +25,7 @@ const Process: React.FC = () => {
           <div className="mt-10 flex justify-center">
             <div className="w-full max-w-lg overflow-hidden rounded-3xl shadow-2xl">
               <img
-                src="/daraksite/training.gif"
+                src="/training.gif"
                 alt="학습 훈련 애니메이션"
                 className="w-full h-auto object-cover"
               />
@@ -85,7 +85,7 @@ const Process: React.FC = () => {
               <SwiperSlide key={idx}>
                 <div className="bg-white">
                   <img
-                    src={`/daraksite/${img}`}
+                    src={`/${img}`}
                     alt={`문해력 테스트 샘플 ${idx + 1}`}
                     className="w-full h-auto object-contain"
                   />

@@ -89,7 +89,7 @@ const App: React.FC = () => {
         const html = await response.text();
 
         // Vite 빌드 결과물 중 index-*.js 파일의 해시값을 추출
-        const match = html.match(/src="\/daraksite\/assets\/index-([a-zA-Z0-9]+)\.js"/);
+        const match = html.match(/src="\/assets\/index-([a-zA-Z0-9]+)\.js"/);
         if (match && match[1]) {
           const newHash = match[1];
           const oldHash = localStorage.getItem('app-version-hash');

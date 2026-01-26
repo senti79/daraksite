@@ -10,14 +10,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const strengthsData = [
-  { lottie: "/daraksite/read.json", title: <>책 한 권, <br />통째로 읽기</>, description: '작품의 전체 구성을 파악하고 문장 사이의 숨은 의미를 찾는 힘을 키웁니다.' },
-  { lottie: "/daraksite/no.json", title: <>발췌독, <br />요약독 NO</>, description: '기계적 읽기가 아닌, 이야기 전체를 이해하며 깊은 감동과 체화를 이끌어냅니다.' },
-  { lottie: "/daraksite/shelves.json", title: <>연 96권, <br />깊이 있는 다독</>, description: '주 2회, 월 8권의 꾸준한 정독으로 독서 습관과 이해력을 동시에 잡습니다.' },
-  { lottie: "/daraksite/favorite-book.json", title: <>원에서 <br />정독</>, description: '원에서 선생님의 지도아래 책을 꼼꼼하게 집중하여 책 한 권을 온전히 읽습니다.' },
-  { lottie: "/daraksite/books.json", title: <>편독 없는 <br />균형 독서</>, description: '인문, 사회, 과학, 예술 등 전 분야를 아우르며 통합적 사고를 기릅니다.' },
-  { lottie: "/daraksite/writing.json", title: <>100% <br />서답형 서술형</>, description: '오지선다형이 아닌, 나의 생각을 글로 쓰면서 나만의 언어를 키웁니다.' },
-  { lottie: "/daraksite/layout.json", title: <>개별 <br />맞춤형 수업</>, description: '독서 능력 테스트를 통해 개인의 수준과 성향에 맞춘 최적의 교육을 제공합니다.' },
-  { lottie: "/daraksite/teacher.json", title: <>엄선된 <br />최고의 선생님</>, description: '검증된 선생님의 교육으로 아이들 문해력을 향상시킵니다.' },
+  { lottie: "/read.json", title: <>책 한 권, <br />통째로 읽기</>, description: '작품의 전체 구성을 파악하고 문장 사이의 숨은 의미를 찾는 힘을 키웁니다.' },
+  { lottie: "/no.json", title: <>발췌독, <br />요약독 NO</>, description: '기계적 읽기가 아닌, 이야기 전체를 이해하며 깊은 감동과 체화를 이끌어냅니다.' },
+  { lottie: "/shelves.json", title: <>연 96권, <br />깊이 있는 다독</>, description: '주 2회, 월 8권의 꾸준한 정독으로 독서 습관과 이해력을 동시에 잡습니다.' },
+  { lottie: "/favorite-book.json", title: <>원에서 <br />정독</>, description: '원에서 선생님의 지도아래 책을 꼼꼼하게 집중하여 책 한 권을 온전히 읽습니다.' },
+  { lottie: "/books.json", title: <>편독 없는 <br />균형 독서</>, description: '인문, 사회, 과학, 예술 등 전 분야를 아우르며 통합적 사고를 기릅니다.' },
+  { lottie: "/writing.json", title: <>100% <br />서답형 서술형</>, description: '오지선다형이 아닌, 나의 생각을 글로 쓰면서 나만의 언어를 키웁니다.' },
+  { lottie: "/layout.json", title: <>개별 <br />맞춤형 수업</>, description: '독서 능력 테스트를 통해 개인의 수준과 성향에 맞춘 최적의 교육을 제공합니다.' },
+  { lottie: "/teacher.json", title: <>엄선된 <br />최고의 선생님</>, description: '검증된 선생님의 교육으로 아이들 문해력을 향상시킵니다.' },
 ];
 
 const Strengths: React.FC = () => {

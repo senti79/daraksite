@@ -1,6 +1,7 @@
 {
   "name": "책읽는-다락서원",
   "private": true,
+  "homepage": "https://www.daracseowon.com",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

@@ -15,13 +15,13 @@ npm install
 ## 2. GitHub Pages 배포를 위한 주요 설정 변경
 
 ### 2.1 Vite 설정 수정 (`vite.config.ts`)
-GitHub Pages의 서브 디렉토리 구조(`/<repository-name>/`)에서 자산을 올바르게 참조할 수 있도록 `base` 경로를 설정했습니다.
+커스텀 도메인(`www.daracseowon.com`)을 사용하므로 `base` 경로를 루트(`/`)로 설정했습니다.
 
 ```typescript
 // vite.config.ts
 export default defineConfig(({ mode }) => {
     return {
-      base: '/daraksite/', // 저장소 이름을 base 경로로 지정
+      base: '/', // 커스텀 도메인을 위해 루트 경로로 지정
       // ... 기타 설정
     };
 });
@@ -57,23 +57,23 @@ npm install -g gh-pages
 
 ## 4. 확인 및 유지보수
 
-- **배포 주소**: [https://senti79.github.io/daraksite/](https://senti79.github.io/daraksite/)
+- **배포 주소**: [https://www.daracseowon.com](https://www.daracseowon.com)
 - **업데이트 및 배포 방법**: 코드 수정 후 `git push`를 통해 `main` 브랜치를 업데이트합니다. 이후 **무조건** `npm run deploy`를 실행하여 사이트에 최신 상태를 반영합니다. (Antigravity AI가 자동으로 수행합니다.)
 
 ## 5. 자산(Assets) 사용 규칙 (이미지, 로티 파일 등)
 
-GitHub Pages 배포 특성상 자산을 참조할 때 아래 규칙을 준수해야 합니다.
+커스텀 도메인 적용으로 인해 모든 자산은 루트 경로를 기준으로 참조합니다.
 
 ### 5.1 파일 위치
 모든 정적 자산(이미지, 로티 애니메이션 파일 등)은 로컬 프로젝트의 **`public/`** 폴더에 넣습니다.
 - 예: `public/darak.png`, `public/animation.lottie`
 
 ### 5.2 코드 내 경로 설정
-코드에서 파일을 불러올 때는 반드시 앞에 **/daraksite/** 를 붙여야 합니다.
+코드에서 파일을 불러올 때는 앞에 **/daraksite/** 를 제거하고 루트 경로(**/**)부터 시작합니다.
 
 - **이미지 예시**:
   ```tsx
-  <img src="/daraksite/darak.png" />
+  <img src="/darak.png" />
   ```
 
 - **로티(Lottie) 애니메이션 예시**:
@@ -81,11 +81,11 @@ GitHub Pages 배포 특성상 자산을 참조할 때 아래 규칙을 준수해
   import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
   <DotLottieReact
-    src="/daraksite/animation.lottie"
+    src="/animation.lottie"
     loop
     autoplay
   />
   ```
 
 ---
-*작성일: 2026-01-24*
+*수정일: 2026-01-26 (커스텀 도메인 적용)*
