@@ -1,5 +1,12 @@
 import React, { useEffect } from 'react';
 import SectionSeparator from './SectionSeparator';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const processSteps = [
   { title: '문해력 테스트', description: '입회 시 개인별 독서 능력을 정밀하게 진단합니다.' },
@@ -63,14 +70,41 @@ const Process: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-            <img src="/daraksite/test2.png" alt="문해력 테스트 샘플 2" className="w-full h-auto transition-transform duration-500 hover:scale-105" />
-          </div>
-          <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-100">
-            <img src="/daraksite/test1.png" alt="문해력 테스트 샘플 1" className="w-full h-auto transition-transform duration-500 hover:scale-105" />
-          </div>
+        <div className="max-w-3xl mx-auto px-4">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            loop={true}
+            className="rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+          >
+            {['test1.png', 'test3.png', 'test2.png'].map((img, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="bg-white">
+                  <img
+                    src={`/daraksite/${img}`}
+                    alt={`문해력 테스트 샘플 ${idx + 1}`}
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
+
+        <style>{`
+          #process .swiper-button-next, 
+          #process .swiper-button-prev {
+              color: #D35400 !important;
+              transform: scale(0.6);
+          }
+          #process .swiper-pagination-bullet-active {
+              background: #D35400 !important;
+          }
+        `}</style>
       </div>
     </section>
   );
