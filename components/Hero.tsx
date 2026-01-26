@@ -90,10 +90,10 @@ const Hero: React.FC = () => {
           <HeroImage className="hidden lg:block lg:w-2/5 lg:-mt-2" />
 
           {/* Text Content Area */}
-          <div className="w-full lg:w-3/5 text-center lg:text-left z-10">
+          <div className="w-full lg:w-3/5 text-center lg:text-left z-10 lg:-mt-2">
 
             <h1 className="text-[#3D3B3A] leading-tight mb-8">
-              <span className="hero-line-static block text-4xl md:text-5xl lg:text-6xl font-black mb-2 pt-12">
+              <span className="hero-line-static block text-4xl md:text-5xl lg:text-6xl font-black mb-2 pt-12 lg:pt-0">
                 책 한 권을
               </span>
               <span className="hero-line-static block text-4xl md:text-5xl lg:text-6xl font-black mb-2">
