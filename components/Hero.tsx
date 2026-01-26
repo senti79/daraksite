@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
           <div className="w-full lg:w-3/5 text-center lg:text-left z-10">
 
             <h1 className="text-[#3D3B3A] leading-tight mb-8">
-              <span className="hero-line-static block text-4xl md:text-5xl lg:text-6xl font-black mb-2 pt-6">
+              <span className="hero-line-static block text-4xl md:text-5xl lg:text-6xl font-black mb-2 pt-12">
                 책 한 권을
               </span>
               <span className="hero-line-static block text-4xl md:text-5xl lg:text-6xl font-black mb-2">
