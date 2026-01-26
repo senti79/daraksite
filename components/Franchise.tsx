@@ -129,7 +129,7 @@ const Franchise: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mt-16 mb-8">
+        <div className="flex flex-wrap justify-center gap-5 md:gap-10 mt-16 mb-8">
           <a href="tel:010-8428-2478" className="flex items-center gap-3 px-5 py-2 border-2 border-[#065F46] rounded-full bg-white hover:bg-gray-50 transition-all shadow-sm group">
             <div className="w-8 h-8 rounded-full bg-[#FFF7ED] flex items-center justify-center group-hover:scale-110 transition-transform">
               <svg className="w-4 h-4 text-[#EA580C] animate-jelly" fill="currentColor" viewBox="0 0 24 24">
