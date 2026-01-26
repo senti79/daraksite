@@ -81,7 +81,7 @@ const Process: React.FC = () => {
             loop={true}
             className="rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
           >
-            {['test1.png', 'test3.png', 'test2.png'].map((img, idx) => (
+            {['test1.png', 'test3.png', 'test2.png', 'test4.png', 'test5.png', 'test6.png'].map((img, idx) => (
               <SwiperSlide key={idx}>
                 <div className="bg-white">
                   <img
