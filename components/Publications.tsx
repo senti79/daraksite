@@ -65,7 +65,7 @@ const Publications: React.FC = () => {
                     {publications.map((pub, index) => (
                         <div key={index} className="grid md:grid-cols-5 gap-10 md:gap-12 items-center">
                             <div className={`md:col-span-2 w-full ${index % 2 !== 0 ? 'md:order-2' : 'md:order-1'}`}>
-                                <div className="max-w-[80%] mx-auto md:max-w-none rounded-2xl shadow-xl border-2 md:border-4 border-[#D35400]/10 overflow-hidden relative bg-white"
+                                <div className="max-w-[65%] mx-auto md:max-w-none rounded-2xl shadow-xl border-2 md:border-4 border-[#D35400]/10 overflow-hidden relative bg-white"
                                     style={{ touchAction: 'pan-y' }}>
                                     <div className="relative w-full pb-[133.33%]">
                                         <div className="absolute inset-0">
