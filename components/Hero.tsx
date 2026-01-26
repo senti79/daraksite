@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
             <div className="hero-desc max-w-xl mx-auto lg:mx-0">
               <p className="text-lg md:text-xl text-gray-600  leading-relaxed">
                 AI 시대 <br />
-                인문학적 인재를 길러내는 <br />
+                <strong className="font-semibold text-[#065F46]">인문학적 인재</strong>를 길러내는 <br />
                 책읽는 다락서원 독서 시스템
               </p>
             </div>
