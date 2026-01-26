@@ -131,8 +131,8 @@ const Hero: React.FC = () => {
           className="mt-12 lg:mt-32 flex flex-col items-center gap-3 cursor-pointer group animate-fade-in-delayed w-full"
         >
           <div className="flex items-center gap-4">
-            <div className="relative w-6 h-10 rounded-full border-2 border-gray-300 flex justify-center p-1.5 transition-colors group-hover:border-gray-400">
-              <div className="w-1 h-2 bg-gray-400 rounded-full animate-scroll-mouse"></div>
+            <div className="relative w-6 h-10 rounded-full border-2 border-[#065F46]/30 flex justify-center p-1.5 transition-colors group-hover:border-[#065F46]/60">
+              <div className="w-1 h-2 bg-[#065F46]/50 rounded-full animate-scroll-mouse"></div>
             </div>
             <span className="text-xs font-bold text-gray-400 tracking-[0.2em] group-hover:text-gray-600 transition-colors uppercase">
               Scroll to Explore
