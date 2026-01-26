@@ -65,7 +65,7 @@ const Process: React.FC = () => {
           </h3>
           <p className="mt-4 text-lg text-gray-600 ">
             책읽는 다락서원에서 개발한 <br className="md:hidden" />
-            <span className="font-bold text-[#3D3B3A]">국내 최초 100% 서술형 답안</span>으로 <br />
+            <span className="font-bold text-[#065F46]">국내 최초 100% 서술형 답안</span>으로 <br />
             문해력을 정확히 진단합니다.
           </p>
         </div>
