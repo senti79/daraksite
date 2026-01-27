@@ -52,7 +52,7 @@ const Branches: React.FC = () => {
                                 {branches.map(branch => (
                                     <li key={branch.name} className="flex justify-between items-center">
                                         <span className="text-gray-800 font-semibold">{branch.name}</span>
-                                        <a href={`tel:${branch.phone}`} className="text-gray-600 hover:text-[#D35400] transition-colors">{branch.phone}</a>
+                                        <a href={`tel:${branch.phone}`} className="text-gray-600 hover:text-[#D35400] transition-colors tabular-nums">{branch.phone}</a>
                                     </li>
                                 ))}
                             </ul>
