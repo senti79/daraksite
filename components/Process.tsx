@@ -73,12 +73,11 @@ const Process: React.FC = () => {
 
         <div className="text-center mt-12 md:mt-20 mb-16">
           <h3 className="text-3xl md:text-4xl font-bold text-[#3D3B3A]">
-            <span className="text-highlight">문해력 테스트</span>
+            <span className="text-highlight">국내 최초 서술형 답안 평가 시스템</span>
           </h3>
           <p className="mt-4 text-lg text-gray-600 ">
-            책읽는 다락서원에서 개발한 <br className="md:hidden" />
-            <span className="font-bold text-[#065F46]">국내 최초 100% 서술형 답안</span>으로 <br />
-            문해력을 정확히 진단합니다.
+            아이의 문해력을 <span className="font-bold text-[#065F46]">여섯 개의 영역</span>으로 나누어 <br className="md:hidden" />
+            체계적으로 평가합니다.
           </p>
         </div>
 
