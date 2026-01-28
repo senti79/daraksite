@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 const processSteps = [
   {
     title: '문해력 테스트',
-    description: <>책읽는 다락서원에서 자체 개발한 <br />국내 최초 100% 서술형 평가 시스템으로 <br />문해력을 정확히 진단합니다.</>
+    description: <>책읽는 다락서원에서 자체 개발한 <br />100% 서술형 평가 시스템으로 <br />문해력을 정확히 진단합니다.</>
   },
   {
     title: '몰입하여 책 읽기',
@@ -76,7 +76,7 @@ const Process: React.FC = () => {
             <span className="text-highlight">문해력 평가</span>
           </h3>
           <p className="mt-4 text-lg text-gray-600 ">
-            아이의 문해력을 <span className="font-bold text-[#065F46]">여섯 개의 영역</span>으로 나누어 <br className="md:hidden" />
+            국내 최초로 서술형 답안을 <span className="font-bold text-[#065F46]">여섯 개의 영역</span>으로 나누어 <br className="md:hidden" />
             체계적으로 평가합니다.
           </p>
         </div>
