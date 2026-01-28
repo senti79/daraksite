@@ -76,7 +76,8 @@ const Process: React.FC = () => {
             <span className="text-highlight">문해력 평가</span>
           </h3>
           <p className="mt-4 text-lg text-gray-600 ">
-            국내 최초로 서술형 답안을 <span className="font-bold text-[#065F46]">여섯 개의 영역</span>으로 나누어 <br className="md:hidden" />
+            국내 최초로 서술형 답안을 <br className="md:hidden" />
+            <span className="font-bold text-[#065F46]">여섯 개의 영역</span>으로 나누어 <br className="md:hidden" />
             체계적으로 평가합니다.
           </p>
         </div>
