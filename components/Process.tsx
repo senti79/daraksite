@@ -9,10 +9,22 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const processSteps = [
-  { title: '문해력 테스트', description: '입회 후 문해력 및 독서능력을 책읽는 다락서원에서 자체 개발한 서술형 평가 시스템으로 정밀하게 진단합니다.' },
-  { title: '책 한 권 통째로 읽기', description: '선생님의 지도 아래 작품 전체를 깊이 있게 정독합니다.' },
-  { title: '내용 이해와 서답형 글쓰기', description: '책의 핵심 내용을 파악하고 질문에 답하며 이해를 확인합니다.' },
-  { title: '주제별 서술형 글쓰기', description: '자신의 생각을 논리적으로 풀어내는 심화 글쓰기를 진행합니다.' },
+  {
+    title: '문해력 테스트',
+    description: <>책읽는 다락서원에서 자체 개발한 <br />국내 최초 100% 서술형 평가 시스템으로 <br />문해력을 정확히 진단합니다.</>
+  },
+  {
+    title: '몰입하여 책 읽기',
+    description: <>선생님의 지도 아래 <br />책 한 권을 정독합니다.</>
+  },
+  {
+    title: '책에 대한 글쓰기',
+    description: <>책 내용 이해, 관련 어휘, 추론적 이해, 사고력 글쓰기를 <br />서답형, 서술형으로 씁니다.</>
+  },
+  {
+    title: '선생님의 밀착형 지도',
+    description: <>맞춤법, 단어, 문장을 <br />현장에서 고쳐 쓰면서 <br />책 이해와 글쓰기를 완성합니다.</>
+  },
 ];
 
 const Process: React.FC = () => {
